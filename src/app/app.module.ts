@@ -9,6 +9,8 @@ import { ChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
 import { ReportesComponent } from './reportes/reportes.component';
 
+import { DatosService } from './servicios/datos.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { ReportesComponent } from './reportes/reportes.component';
     AppRoutingModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [
+    DatosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

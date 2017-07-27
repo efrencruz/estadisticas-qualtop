@@ -1,0 +1,7 @@
+DROP DATABASE Datos;
+CREATE DATABASE Datos;
+USE Datos;
+
+CREATE TABLE IF NOT EXISTS `Prueba` (
+  `nombre` varchar(150) DEFAULT NULL
+);

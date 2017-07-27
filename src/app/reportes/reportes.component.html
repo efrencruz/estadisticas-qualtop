@@ -1,21 +1,350 @@
-<h3>
-  Reportes Qualtop
-</h3>
-<div class="container">
-  <div class="col-md-4">
-
+<div>
+  <div class="col-md-2">
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+        Lista de categorías
+      </a>
+      <a href="#" class="list-group-item" (click)="verIdiomas()">Idiomas</a>
+      <a href="#" class="list-group-item" (click)="verHerramientas1()">1 Herramientas de trabajo</a>
+      <a href="#" class="list-group-item" (click)="verHerramientas2()">2 Herramientas de trabajo</a>
+      <a href="#" class="list-group-item" (click)="verHerramientas3()">3 Herramientas de trabajo</a>
+      <a href="#" class="list-group-item" (click)="verHerramientas4()">4 Herramientas de trabajo</a>
+      <a href="#" class="list-group-item" (click)="verHerramientas5()">5 Herramientas de trabajo</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes1()">1 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes2()">2 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes3()">3 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes4()">4 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes5()">5 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verLenguajes6()">6 Leng. de programación</a>
+      <a href="#" class="list-group-item" (click)="verSoluciones()">Soluciones en la nube</a>
+      <a href="#" class="list-group-item" (click)="verCertificaciones1()">1 Certificaciones</a>
+      <a href="#" class="list-group-item" (click)="verCertificaciones2()">2 Certificaciones</a>
+      <a href="#" class="list-group-item" (click)="verCertificaciones3()">3 Certificaciones</a>
+      <a href="#" class="list-group-item" (click)="verMetodologias1()">1 Metodologías</a>
+      <a href="#" class="list-group-item" (click)="verMetodologias2()">2 Metodologías</a>
+    </div>
   </div>
-  <div class="col-md-8">
-    <div style="display: block">
-      <canvas baseChart
-              [datasets]="barChartData"
-              [labels]="barChartLabels"
+  <div class="col-md-10">
+    <div [hidden]="!metodologia1">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataCertificacion1"
+              [labels]="barChartLabelsMetodologia1"
               [options]="barChartOptions"
-              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartClick)="verDatosMetodologias($event)"></canvas>
+    </div>
+    <div [hidden]="!metodologia2">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataMetodologia"
+              [labels]="barChartLabelsMetodologia2"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosMetodologias($event)"></canvas>
+    </div>
+    <div [hidden]="!certificacion1">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataCertificacion1"
+              [labels]="barChartLabelsCertificacion1"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!certificacion2">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataCertificacion1"
+              [labels]="barChartLabelsCertificacion2"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!certificacion3">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataCertificacion1"
+              [labels]="barChartLabelsCertificacion3"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!idioma">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataIdioma"
+              [labels]="barChartLabelsIdioma"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!solucion">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataSolucion"
+              [labels]="barChartLabelsSolucion"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosSoluciones($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje1">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsLenguaje1"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje2">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsLenguaje2"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje3">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsLenguaje3"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje4">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsLenguaje4"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje5">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsLenguaje5"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatos($event)"></canvas>
+    </div>
+    <div [hidden]="!lenguaje6">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta6"
+              [labels]="barChartLabelsLenguaje6"
+              [options]="barChartOptions"
               [chartType]="barChartType"
               (chartHover)="chartHovered($event)"
-              (chartClick)="chartClicked($event)"></canvas>
+              (chartClick)="verDatos($event)"></canvas>
     </div>
-    <button (click)="randomize()">Update</button>
+    <div [hidden]="!herramienta1">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsHerramienta"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+    <div [hidden]="!herramienta2">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsHerramienta2"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+    <div [hidden]="!herramienta3">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsHerramienta3"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+    <div [hidden]="!herramienta4">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta"
+              [labels]="barChartLabelsHerramienta4"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+    <div [hidden]="!herramienta5">
+      <canvas height="90px" baseChart
+              [datasets]="barChartDataHerramienta5"
+              [labels]="barChartLabelsHerramienta5"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <hr>
+
+    <h3>{{tipo}}</h3>
+
+    <ul *ngIf="seleccionado" class="nav nav-tabs nav-justified">
+      <li id="certificadoMenu" (click)="verLista('certificado')" class="active"><a href="#">Certificado</a></li>
+      <li id="cursoMenu" (click)="verLista('curso')" class=""><a href="#">Curso sin certificación</a></li>
+      <li id="avanzadoMenu" (click)="verLista('avanzado')" class=""><a href="#">Avanzado</a></li>
+      <li id="intermedioMenu" (click)="verLista('intermedio')" class=""><a href="#">Intermedio</a></li>
+      <li id="basicoMenu" (click)="verLista('basico')" class=""><a href="#">Básico</a></li>
+      <li id="nocionMenu" (click)="verLista('nocion')" class=""><a href="#">Noción</a></li>
+      <li id="ningunoMenu" (click)="verLista('ninguno')" class=""><a href="#">Ninguno</a></li>
+    </ul>
+
+    <div id="certificado" *ngIf="certificado">
+      <h4 class="text-primary">Certificado</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Certificado">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Certificado">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Certificado">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="curso" *ngIf="curso">
+      <h4 class="text-primary">Curso sin certificación</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Curso">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Curso">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Curso">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="avanzado" *ngIf="avanzado">
+      <h4 class="text-primary">Avanzado</h4>
+      <div  class="tab-pane fade in active" *ngIf="personas.Avanzado">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Avanzado">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Avanzado">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="intermedio" *ngIf="intermedio">
+      <h4 class="text-primary">Intermedio</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Intermedio">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Intermedio">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Intermedio">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="basico" *ngIf="basico">
+      <h4 class="text-primary">Básico</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Basico">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Basico">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Basico">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="nocion" *ngIf="nocion">
+      <h4 class="text-primary">Noción</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Nocion">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Nocion">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Nocion">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
+    <div id="ninguno" *ngIf="ninguno">
+      <h4 class="text-primary">Ninguno</h4>
+      <div class="tab-pane fade in active" *ngIf="personas.Ninguno">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Cargo actual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of personas.Ninguno">
+              <td>{{persona.Nombre}}</td>
+              <td>{{persona.Cargo_actual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!personas.Ninguno">
+        <div class="alert alert-danger" role="alert">No hay personas para mostrar</div>
+      </div>
+    </div>
+
   </div>
 </div>
