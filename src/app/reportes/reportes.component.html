@@ -1,30 +1,30 @@
 <div>
-  <div class="col-md-2">
-    <div class="list-group">
-      <a href="#" class="list-group-item active">
-        Lista de categorías
-      </a>
-      <a href="#" class="list-group-item" (click)="verIdiomas()">Idiomas</a>
-      <a href="#" class="list-group-item" (click)="verHerramientas1()">1 Herramientas de trabajo</a>
-      <a href="#" class="list-group-item" (click)="verHerramientas2()">2 Herramientas de trabajo</a>
-      <a href="#" class="list-group-item" (click)="verHerramientas3()">3 Herramientas de trabajo</a>
-      <a href="#" class="list-group-item" (click)="verHerramientas4()">4 Herramientas de trabajo</a>
-      <a href="#" class="list-group-item" (click)="verHerramientas5()">5 Herramientas de trabajo</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes1()">1 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes2()">2 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes3()">3 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes4()">4 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes5()">5 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verLenguajes6()">6 Leng. de programación</a>
-      <a href="#" class="list-group-item" (click)="verSoluciones()">Soluciones en la nube</a>
-      <a href="#" class="list-group-item" (click)="verCertificaciones1()">1 Certificaciones</a>
-      <a href="#" class="list-group-item" (click)="verCertificaciones2()">2 Certificaciones</a>
-      <a href="#" class="list-group-item" (click)="verCertificaciones3()">3 Certificaciones</a>
-      <a href="#" class="list-group-item" (click)="verMetodologias1()">1 Metodologías</a>
-      <a href="#" class="list-group-item" (click)="verMetodologias2()">2 Metodologías</a>
+  <div class="col-md-2 menu">
+    <h4>Lista de categorías</h4>
+    <div class="list-group lista">
+      <!-- <a href="#" class="list-group-item" (click)="verIdiomas()">Idiomas</a> -->
+      <a id="h1" href="#" class="list-group-item" (click)="verHerramientas1()">1 Herramientas de trabajo</a>
+      <a id="h2" href="#" class="list-group-item" (click)="verHerramientas2()">2 Herramientas de trabajo</a>
+      <a id="h3" href="#" class="list-group-item" (click)="verHerramientas3()">3 Herramientas de trabajo</a>
+      <a id="h4" href="#" class="list-group-item" (click)="verHerramientas4()">4 Herramientas de trabajo</a>
+      <a id="h5" href="#" class="list-group-item" (click)="verHerramientas5()">5 Herramientas de trabajo</a>
+      <a id="l1" href="#" class="list-group-item" (click)="verLenguajes1()">1 Leng. de programación</a>
+      <a id="l2" href="#" class="list-group-item" (click)="verLenguajes2()">2 Leng. de programación</a>
+      <a id="l3" href="#" class="list-group-item" (click)="verLenguajes3()">3 Leng. de programación</a>
+      <a id="l4" href="#" class="list-group-item" (click)="verLenguajes4()">4 Leng. de programación</a>
+      <a id="l5" href="#" class="list-group-item" (click)="verLenguajes5()">5 Leng. de programación</a>
+      <a id="l6" href="#" class="list-group-item" (click)="verLenguajes6()">6 Leng. de programación</a>
+      <a id="s" href="#" class="list-group-item" (click)="verSoluciones()">Soluciones en la nube</a>
+      <a id="c1" href="#" class="list-group-item" (click)="verCertificaciones1()">1 Certificaciones</a>
+      <a id="c2" href="#" class="list-group-item" (click)="verCertificaciones2()">2 Certificaciones</a>
+      <a id="c3" href="#" class="list-group-item" (click)="verCertificaciones3()">3 Certificaciones</a>
+      <a id="m1" href="#" class="list-group-item" (click)="verMetodologias1()">1 Metodologías</a>
+      <a id="m2" href="#" class="list-group-item" (click)="verMetodologias2()">2 Metodologías</a>
     </div>
   </div>
+
   <div class="col-md-10">
+
     <div [hidden]="!metodologia1">
       <canvas height="90px" baseChart
               [datasets]="barChartDataCertificacion1"
@@ -33,6 +33,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosMetodologias($event)"></canvas>
     </div>
+
     <div [hidden]="!metodologia2">
       <canvas height="90px" baseChart
               [datasets]="barChartDataMetodologia"
@@ -41,6 +42,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosMetodologias($event)"></canvas>
     </div>
+
     <div [hidden]="!certificacion1">
       <canvas height="90px" baseChart
               [datasets]="barChartDataCertificacion1"
@@ -49,6 +51,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!certificacion2">
       <canvas height="90px" baseChart
               [datasets]="barChartDataCertificacion1"
@@ -57,6 +60,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!certificacion3">
       <canvas height="90px" baseChart
               [datasets]="barChartDataCertificacion1"
@@ -65,6 +69,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!idioma">
       <canvas height="90px" baseChart
               [datasets]="barChartDataIdioma"
@@ -73,6 +78,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!solucion">
       <canvas height="90px" baseChart
               [datasets]="barChartDataSolucion"
@@ -81,6 +87,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosSoluciones($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje1">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -89,6 +96,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje2">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -97,6 +105,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje3">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -105,6 +114,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje4">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -113,6 +123,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje5">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -121,6 +132,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!lenguaje6">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta6"
@@ -130,6 +142,7 @@
               (chartHover)="chartHovered($event)"
               (chartClick)="verDatos($event)"></canvas>
     </div>
+
     <div [hidden]="!herramienta1">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -138,6 +151,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosHerramienta($event)"></canvas>
     </div>
+
     <div [hidden]="!herramienta2">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -146,6 +160,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosHerramienta($event)"></canvas>
     </div>
+
     <div [hidden]="!herramienta3">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -154,6 +169,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosHerramienta($event)"></canvas>
     </div>
+
     <div [hidden]="!herramienta4">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta"
@@ -162,6 +178,7 @@
               [chartType]="barChartType"
               (chartClick)="verDatosHerramienta($event)"></canvas>
     </div>
+
     <div [hidden]="!herramienta5">
       <canvas height="90px" baseChart
               [datasets]="barChartDataHerramienta5"

@@ -132,6 +132,61 @@ export class ReportesComponent implements OnInit {
     }
   ];
 
+  public barChartDataHerramienta:any[] = [
+    {
+      data:[0,0,0,0,0,0,0],label:"A"
+    },{
+      data:[0,0,0,0,0,0,0],label:"B"
+    },{
+      data:[0,0,0,0,0,0,0],label:"C"
+    },{
+      data:[0,0,0,0,0,0,0],label:"D"
+    },{
+      data:[0,0,0,0,0,0,0],label:"E"
+    },{
+      data:[0,0,0,0,0,0,0],label:"F"
+    },{
+      data:[0,0,0,0,0,0,0],label:"G"
+    }
+  ];
+
+  public barChartDataHerramienta5:any[] = [
+    {
+      data:[0,0,0,0],label:"A"
+    },{
+      data:[0,0,0,0],label:"B"
+    },{
+      data:[0,0,0,0],label:"C"
+    },{
+      data:[0,0,0,0],label:"D"
+    },{
+      data:[0,0,0,0],label:"E"
+    },{
+      data:[0,0,0,0],label:"F"
+    },{
+      data:[0,0,0,0],label:"G"
+    }
+  ];
+
+  public barChartDataHerramienta6:any[] = [
+    {
+      data:[0,0,0],label:"A"
+    },{
+      data:[0,0,0],label:"B"
+    },{
+      data:[0,0,0],label:"C"
+    },{
+      data:[0,0,0],label:"D"
+    },{
+      data:[0,0,0],label:"E"
+    },{
+      data:[0,0,0],label:"F"
+    },{
+      data:[0,0,0],label:"G"
+    }
+  ];
+
+
 
   public barChartLabelsMetodologia1:string[] = [
     'ISTQB', 'Agile Testing', 'ISEB', 
@@ -231,54 +286,6 @@ export class ReportesComponent implements OnInit {
     'ALM HP'
   ];
 
-  public barChartDataHerramienta:any[] = [
-    {
-      data:[0,0,0,0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0,0,0,0],label:"F"
-    }
-  ];
-
-  public barChartDataHerramienta5:any[] = [
-    {
-      data:[0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0],label:"F"
-    }
-  ];
-
-  public barChartDataHerramienta6:any[] = [
-    {
-      data:[0,0,0],label:"A"
-    },{
-      data:[0,0,0],label:"B"
-    },{
-      data:[0,0,0],label:"C"
-    },{
-      data:[0,0,0],label:"D"
-    },{
-      data:[0,0,0],label:"E"
-    },{
-      data:[0,0,0],label:"F"
-    }
-  ];
-
   public barChartLabelsLenguaje6:string[] = [
     'SPRING', 'Google AD Words', 'Google Analitics' 
   ];
@@ -288,7 +295,7 @@ export class ReportesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.obtenerIdiomas();
+    this.obtenerHerramientas1();
   }
 
   public verDatos(e:any):void {
@@ -628,6 +635,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her.JIRA_Portafolio.Nocion.total),
               parseInt(this.her.ALM_HP.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.her.Microsoft_Office.Ninguno.total),
+              parseInt(this.her.JIRA.Ninguno.total),
+              parseInt(this.her.Confluence.Ninguno.total),
+              parseInt(this.her.Visual_Studio.Ninguno.total),
+              parseInt(this.her.Bamboo.Ninguno.total),
+              parseInt(this.her.JIRA_Portafolio.Ninguno.total),
+              parseInt(this.her.ALM_HP.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -723,6 +740,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her2.Ilustrator.Nocion.total),
               parseInt(this.her2.Microsoft_Project.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.her2.Android_Studio.Ninguno.total),
+              parseInt(this.her2.Balsamiq_Mockps.Ninguno.total),
+              parseInt(this.her2.Bitbucket.Ninguno.total),
+              parseInt(this.her2.Visio.Ninguno.total),
+              parseInt(this.her2.PhotoShop.Ninguno.total),
+              parseInt(this.her2.Ilustrator.Ninguno.total),
+              parseInt(this.her2.Microsoft_Project.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -818,6 +845,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her3.HipChat.Nocion.total),
               parseInt(this.her3.Appraisal_Assistant.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.her3.SQL_Server.Ninguno.total),
+              parseInt(this.her3.Sublime_text.Ninguno.total),
+              parseInt(this.her3.Skype.Ninguno.total),
+              parseInt(this.her3.Team_Viewer.Ninguno.total),
+              parseInt(this.her3.GoTo_Meeting.Ninguno.total),
+              parseInt(this.her3.HipChat.Ninguno.total),
+              parseInt(this.her3.Appraisal_Assistant.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -913,6 +950,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her4.Opera.Nocion.total),
               parseInt(this.her4.Bizagi.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.her4.Dreamweaver.Ninguno.total),
+              parseInt(this.her4.Net_Beans.Ninguno.total),
+              parseInt(this.her4.Eclipse.Ninguno.total),
+              parseInt(this.her4.ABAP_Workbech.Ninguno.total),
+              parseInt(this.her4.ARIS.Ninguno.total),
+              parseInt(this.her4.Opera.Ninguno.total),
+              parseInt(this.her4.Bizagi.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -990,6 +1037,13 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her5.Power_Point.Nocion.total),
               parseInt(this.her5.Word.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.her5.Microsoft_Project.Ninguno.total),
+              parseInt(this.her5.Excel.Ninguno.total),
+              parseInt(this.her5.Power_Point.Ninguno.total),
+              parseInt(this.her5.Word.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1085,6 +1139,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len.Ruby.Nocion.total),
               parseInt(this.len.SQL_1.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len.Java.Ninguno.total),
+              parseInt(this.len.C_plus_plus.Ninguno.total),
+              parseInt(this.len.PHP.Ninguno.total),
+              parseInt(this.len.iOS.Ninguno.total),
+              parseInt(this.len.C_Sharp.Ninguno.total),
+              parseInt(this.len.Ruby.Ninguno.total),
+              parseInt(this.len.SQL_1.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1181,6 +1245,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len2.Phyton.Nocion.total),
               parseInt(this.len2.SAP_ABAP.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len2.Android.Ninguno.total),
+              parseInt(this.len2.ASP_NET.Ninguno.total),
+              parseInt(this.len2.HTML.Ninguno.total),
+              parseInt(this.len2.Java_Script.Ninguno.total),
+              parseInt(this.len2.Visual_Basic.Ninguno.total),
+              parseInt(this.len2.Phyton.Ninguno.total),
+              parseInt(this.len2.SAP_ABAP.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1276,6 +1350,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len3.Hadoop.Nocion.total),
               parseInt(this.len3.SPARK.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len3.Oracle.Ninguno.total),
+              parseInt(this.len3.MySQL.Ninguno.total),
+              parseInt(this.len3.Postgre.Ninguno.total),
+              parseInt(this.len3.JSF_2_0.Ninguno.total),
+              parseInt(this.len3.Big_Data.Ninguno.total),
+              parseInt(this.len3.Hadoop.Ninguno.total),
+              parseInt(this.len3.SPARK.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1371,6 +1455,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len4.BlockChain.Nocion.total),
               parseInt(this.len4.Wordpress.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len4.Google_Maps.Ninguno.total),
+              parseInt(this.len4.MapReduce.Ninguno.total),
+              parseInt(this.len4.Tomcat.Ninguno.total),
+              parseInt(this.len4.Weblogic.Ninguno.total),
+              parseInt(this.len4.ISS.Ninguno.total),
+              parseInt(this.len4.BlockChain.Ninguno.total),
+              parseInt(this.len4.Wordpress.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1466,6 +1560,16 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len5.JSON.Nocion.total),
               parseInt(this.len5.IONIC.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len5.Joomla.Ninguno.total),
+              parseInt(this.len5.Sharepoint.Ninguno.total),
+              parseInt(this.len5.Hybernate.Ninguno.total),
+              parseInt(this.len5.Angular.Ninguno.total),
+              parseInt(this.len5.Ember.Ninguno.total),
+              parseInt(this.len5.JSON.Ninguno.total),
+              parseInt(this.len5.IONIC.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -1537,6 +1641,12 @@ export class ReportesComponent implements OnInit {
               parseInt(this.len6.Google_AD_Words.Nocion.total),
               parseInt(this.len6.Google_Analitics.Nocion.total)
             ],label: 'Nocion'
+          },{
+            data: [
+              parseInt(this.len6.SPRING.Ninguno.total),
+              parseInt(this.len6.Google_AD_Words.Ninguno.total),
+              parseInt(this.len6.Google_Analitics.Ninguno.total)
+            ],label: 'Ninguno'
           }
         ];
       },
@@ -2135,71 +2245,125 @@ export class ReportesComponent implements OnInit {
     this.obtenerIdiomas();
   }
 
+  descativarOpcionesMenu(){
+    $("#h1").removeClass("list-group-item-info");
+    $("#h2").removeClass("list-group-item-info");
+    $("#h3").removeClass("list-group-item-info");
+    $("#h4").removeClass("list-group-item-info");
+    $("#h5").removeClass("list-group-item-info");
+    $("#l1").removeClass("list-group-item-info");
+    $("#l2").removeClass("list-group-item-info");
+    $("#l3").removeClass("list-group-item-info");
+    $("#l4").removeClass("list-group-item-info");
+    $("#l5").removeClass("list-group-item-info");
+    $("#l6").removeClass("list-group-item-info");
+    $("#s").removeClass("list-group-item-info");
+    $("#c1").removeClass("list-group-item-info");
+    $("#c2").removeClass("list-group-item-info");
+    $("#c3").removeClass("list-group-item-info");
+    $("#m1").removeClass("list-group-item-info");
+    $("#m2").removeClass("list-group-item-info");
+  }
+
   verHerramientas1(){
+    this.descativarOpcionesMenu();
+    $("#h1").addClass("list-group-item-info");
     this.obtenerHerramientas1();
   }
 
   verHerramientas2(){
+    this.descativarOpcionesMenu();
+    $("#h2").addClass("list-group-item-info");
     this.obtenerHerramientas2();
   }
 
   verHerramientas3(){
+    this.descativarOpcionesMenu();
+    $("#h3").addClass("list-group-item-info");
     this.obtenerHerramientas3();
   }
 
   verHerramientas4(){
+    this.descativarOpcionesMenu();
+    $("#h4").addClass("list-group-item-info");
     this.obtenerHerramientas4();
   }
 
   verHerramientas5(){
+    this.descativarOpcionesMenu();
+    $("#h5").addClass("list-group-item-info");
     this.obtenerHerramientas5();
   }
 
   verLenguajes1(){
+    this.descativarOpcionesMenu();
+    $("#l1").addClass("list-group-item-info");
     this.obtenerLenguajes1();
   }
 
   verLenguajes2(){
+    this.descativarOpcionesMenu();
+    $("#l2").addClass("list-group-item-info");
     this.obtenerLenguajes2();
   }
 
   verLenguajes3(){
+    this.descativarOpcionesMenu();
+    $("#l3").addClass("list-group-item-info");
     this.obtenerLenguajes3();
   }
 
   verLenguajes4(){
+    this.descativarOpcionesMenu();
+    $("#l4").addClass("list-group-item-info");
     this.obtenerLenguajes4();
   }
 
   verLenguajes5(){
+    this.descativarOpcionesMenu();
+    $("#l5").addClass("list-group-item-info");
     this.obtenerLenguajes5();
   }
 
   verLenguajes6(){
+    this.descativarOpcionesMenu();
+    $("#l6").addClass("list-group-item-info");
     this.obtenerLenguajes6();
   }
 
   verSoluciones(){
+    this.descativarOpcionesMenu();
+    $("#s").addClass("list-group-item-info");
     this.obtenerSoluciones();
   }
 
   verCertificaciones1(){
+    this.descativarOpcionesMenu();
+    $("#c1").addClass("list-group-item-info");
     this.obtenerCertificaciones1();
   }
 
   verCertificaciones2(){
+    this.descativarOpcionesMenu();
+    $("#c2").addClass("list-group-item-info");
     this.obtenerCertificaciones2();
   }
 
   verCertificaciones3(){
+    this.descativarOpcionesMenu();
+    $("#c3").addClass("list-group-item-info");
     this.obtenerCertificaciones3();
   }
 
   verMetodologias1(){
+    this.descativarOpcionesMenu();
+    $("#m1").addClass("list-group-item-info");
     this.obtenerMetodologias1();
   }
 
   verMetodologias2(){
+    this.descativarOpcionesMenu();
+    $("#m2").addClass("list-group-item-info");
     this.obtenerMetodologias2();
   }
 

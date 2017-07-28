@@ -85,6 +85,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Microsoft_Office']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Microsoft_Office) AS total from Datos WHERE Herramientas_de_trabajo_Microsoft_Office = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Microsoft_Office']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(Herramientas_de_trabajo_JIRA) AS total from Datos WHERE Herramientas_de_trabajo_JIRA = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['JIRA']['Certificado'] = mysqli_fetch_assoc($res);
@@ -109,6 +114,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['JIRA']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_JIRA) AS total from Datos WHERE Herramientas_de_trabajo_JIRA = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['JIRA']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Confluence) AS total from Datos WHERE Herramientas_de_trabajo_Confluence = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Confluence']['Certificado'] = mysqli_fetch_assoc($res);
@@ -132,6 +142,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Confluence) AS total from Datos WHERE Herramientas_de_trabajo_Confluence = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Confluence']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Confluence) AS total from Datos WHERE Herramientas_de_trabajo_Confluence = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Confluence']['Ninguno'] = mysqli_fetch_assoc($res);
 
     
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Visual_Studio) AS total from Datos WHERE Herramientas_de_trabajo_Visual_Studio = 'Certificado'";
@@ -158,6 +172,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Visual_Studio']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Visual_Studio) AS total from Datos WHERE Herramientas_de_trabajo_Visual_Studio = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Visual_Studio']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Bamboo) AS total from Datos WHERE Herramientas_de_trabajo_Bamboo = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Bamboo']['Certificado'] = mysqli_fetch_assoc($res);
@@ -181,6 +200,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Bamboo) AS total from Datos WHERE Herramientas_de_trabajo_Bamboo = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Bamboo']['Nocion'] = mysqli_fetch_assoc($res);
+    
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Bamboo) AS total from Datos WHERE Herramientas_de_trabajo_Bamboo = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Bamboo']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_JIRA_Portafolio) AS total from Datos WHERE Herramientas_de_trabajo_JIRA_Portafolio = 'Certificado'";
@@ -207,8 +230,12 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['JIRA_Portafolio']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_JIRA_Portafolio) AS total from Datos WHERE Herramientas_de_trabajo_JIRA_Portafolio = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['JIRA_Portafolio']['Ninguno'] = mysqli_fetch_assoc($res);
 
-     $sql = "SELECT COUNT(Herramientas_de_trabajo_ALM_HP) AS total from Datos WHERE Herramientas_de_trabajo_ALM_HP = 'Certificado'";
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_ALM_HP) AS total from Datos WHERE Herramientas_de_trabajo_ALM_HP = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ALM_HP']['Certificado'] = mysqli_fetch_assoc($res);
 
@@ -231,6 +258,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_ALM_HP) AS total from Datos WHERE Herramientas_de_trabajo_ALM_HP = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ALM_HP']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_ALM_HP) AS total from Datos WHERE Herramientas_de_trabajo_ALM_HP = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['ALM_HP']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
 
@@ -262,6 +293,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Android_Studio) AS total from Datos WHERE Herramientas_de_trabajo_Android_Studio = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Android_Studio']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Android_Studio) AS total from Datos WHERE Herramientas_de_trabajo_Android_Studio = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Android_Studio']['Ninguno'] = mysqli_fetch_assoc($res);
     
     
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Balsamiq_Mockps) AS total from Datos WHERE Herramientas_de_trabajo_Balsamiq_Mockps = 'Certificado'";
@@ -287,6 +322,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Balsamiq_Mockps) AS total from Datos WHERE Herramientas_de_trabajo_Balsamiq_Mockps = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Balsamiq_Mockps']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Balsamiq_Mockps) AS total from Datos WHERE Herramientas_de_trabajo_Balsamiq_Mockps = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Balsamiq_Mockps']['Ninguno'] = mysqli_fetch_assoc($res);
     
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Bitbucket) AS total from Datos WHERE Herramientas_de_trabajo_Bitbucket = 'Certificado'";
@@ -313,6 +352,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Bitbucket']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Bitbucket) AS total from Datos WHERE Herramientas_de_trabajo_Bitbucket = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Bitbucket']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Visio) AS total from Datos WHERE Herramientas_de_trabajo_Visio = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -337,6 +380,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Visio) AS total from Datos WHERE Herramientas_de_trabajo_Visio = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Visio']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Visio) AS total from Datos WHERE Herramientas_de_trabajo_Visio = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Visio']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_PhotoShop) AS total from Datos WHERE Herramientas_de_trabajo_PhotoShop = 'Certificado'";
@@ -363,6 +410,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['PhotoShop']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_PhotoShop) AS total from Datos WHERE Herramientas_de_trabajo_PhotoShop = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['PhotoShop']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Ilustrator) AS total from Datos WHERE Herramientas_de_trabajo_Ilustrator = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -388,6 +439,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Ilustrator']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Ilustrator) AS total from Datos WHERE Herramientas_de_trabajo_Ilustrator = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Ilustrator']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Microsoft_Project) AS total from Datos WHERE Herramientas_de_trabajo_Microsoft_Project = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -412,6 +467,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Microsoft_Project) AS total from Datos WHERE Herramientas_de_trabajo_Microsoft_Project = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Microsoft_Project']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Microsoft_Project) AS total from Datos WHERE Herramientas_de_trabajo_Microsoft_Project = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Microsoft_Project']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -443,6 +502,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SQL_Server']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_SQL_Server) AS total from Datos WHERE Herramientas_de_trabajo_SQL_Server = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['SQL_Server']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Sublime_text) AS total from Datos WHERE Herramientas_de_trabajo_Sublime_text = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -467,6 +530,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Sublime_text) AS total from Datos WHERE Herramientas_de_trabajo_Sublime_text = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Sublime_text']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Sublime_text) AS total from Datos WHERE Herramientas_de_trabajo_Sublime_text = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Sublime_text']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Skype) AS total from Datos WHERE Herramientas_de_trabajo_Skype = 'Certificado'";
@@ -493,6 +560,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Skype']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Skype) AS total from Datos WHERE Herramientas_de_trabajo_Skype = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Skype']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Team_Viewer) AS total from Datos WHERE Herramientas_de_trabajo_Team_Viewer = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -517,6 +588,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Team_Viewer) AS total from Datos WHERE Herramientas_de_trabajo_Team_Viewer = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Team_Viewer']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Team_Viewer) AS total from Datos WHERE Herramientas_de_trabajo_Team_Viewer = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Team_Viewer']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_GoTo_Meeting) AS total from Datos WHERE Herramientas_de_trabajo_GoTo_Meeting = 'Certificado'";
@@ -543,6 +618,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['GoTo_Meeting']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_GoTo_Meeting) AS total from Datos WHERE Herramientas_de_trabajo_GoTo_Meeting = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['GoTo_Meeting']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_HipChat) AS total from Datos WHERE Herramientas_de_trabajo_HipChat = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -568,6 +647,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['HipChat']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_HipChat) AS total from Datos WHERE Herramientas_de_trabajo_HipChat = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['HipChat']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Appraisal_Assistant) AS total from Datos WHERE Herramientas_de_trabajo_Appraisal_Assistant = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -592,6 +675,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Appraisal_Assistant) AS total from Datos WHERE Herramientas_de_trabajo_Appraisal_Assistant = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Appraisal_Assistant']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Appraisal_Assistant) AS total from Datos WHERE Herramientas_de_trabajo_Appraisal_Assistant = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Appraisal_Assistant']['Ninguno'] = mysqli_fetch_assoc($res);
     
     return $data;
   }
@@ -623,6 +710,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Dreamweaver']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Dreamweaver) AS total from Datos WHERE Herramientas_de_trabajo_Dreamweaver = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Dreamweaver']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Net_Beans) AS total from Datos WHERE Herramientas_de_trabajo_Net_Beans = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -647,6 +738,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Net_Beans) AS total from Datos WHERE Herramientas_de_trabajo_Net_Beans = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Net_Beans']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Net_Beans) AS total from Datos WHERE Herramientas_de_trabajo_Net_Beans = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Net_Beans']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Eclipse) AS total from Datos WHERE Herramientas_de_trabajo_Eclipse = 'Certificado'";
@@ -673,6 +768,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Eclipse']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Eclipse) AS total from Datos WHERE Herramientas_de_trabajo_Eclipse = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Eclipse']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_ABAP_Workbech) AS total from Datos WHERE Herramientas_de_trabajo_ABAP_Workbech = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -697,6 +796,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_ABAP_Workbech) AS total from Datos WHERE Herramientas_de_trabajo_ABAP_Workbech = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ABAP_Workbech']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_ABAP_Workbech) AS total from Datos WHERE Herramientas_de_trabajo_ABAP_Workbech = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['ABAP_Workbech']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_ARIS) AS total from Datos WHERE Herramientas_de_trabajo_ARIS = 'Certificado'";
@@ -723,6 +826,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ARIS']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_ARIS) AS total from Datos WHERE Herramientas_de_trabajo_ARIS = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['ARIS']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Opera) AS total from Datos WHERE Herramientas_de_trabajo_Opera = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -748,6 +855,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Opera']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Opera) AS total from Datos WHERE Herramientas_de_trabajo_Opera = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Opera']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Bizagi) AS total from Datos WHERE Herramientas_de_trabajo_Bizagi = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -772,6 +883,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Bizagi) AS total from Datos WHERE Herramientas_de_trabajo_Bizagi = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Bizagi']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Bizagi) AS total from Datos WHERE Herramientas_de_trabajo_Bizagi = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Bizagi']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -803,6 +918,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Microsoft_Project']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Microsoft_Project_2) AS total from Datos WHERE Herramientas_de_trabajo_Microsoft_Project_2 = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Microsoft_Project']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Excel) AS total from Datos WHERE Herramientas_de_trabajo_Excel = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -827,6 +946,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Excel) AS total from Datos WHERE Herramientas_de_trabajo_Excel = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Excel']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Excel) AS total from Datos WHERE Herramientas_de_trabajo_Excel = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Excel']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Power_Point) AS total from Datos WHERE Herramientas_de_trabajo_Power_Point = 'Certificado'";
@@ -853,6 +976,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Power_Point']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Power_Point) AS total from Datos WHERE Herramientas_de_trabajo_Power_Point = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Power_Point']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Word) AS total from Datos WHERE Herramientas_de_trabajo_Word = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -877,6 +1004,10 @@
     $sql = "SELECT COUNT(Herramientas_de_trabajo_Word) AS total from Datos WHERE Herramientas_de_trabajo_Word = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Word']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Herramientas_de_trabajo_Word) AS total from Datos WHERE Herramientas_de_trabajo_Word = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Word']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -908,6 +1039,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Java']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Java) AS total from Datos WHERE Java = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Java']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(C_plus_plus) AS total from Datos WHERE C_plus_plus = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -932,6 +1067,10 @@
     $sql = "SELECT COUNT(C_plus_plus) AS total from Datos WHERE C_plus_plus = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['C_plus_plus']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(C_plus_plus) AS total from Datos WHERE C_plus_plus = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['C_plus_plus']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(PHP) AS total from Datos WHERE PHP = 'Certificado'";
@@ -958,6 +1097,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['PHP']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(PHP) AS total from Datos WHERE PHP = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['PHP']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(iOS) AS total from Datos WHERE iOS = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -982,6 +1125,10 @@
     $sql = "SELECT COUNT(iOS) AS total from Datos WHERE iOS = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['iOS']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(iOS) AS total from Datos WHERE iOS = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['iOS']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(C_Sharp) AS total from Datos WHERE C_Sharp = 'Certificado'";
@@ -1008,6 +1155,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['C_Sharp']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(C_Sharp) AS total from Datos WHERE C_Sharp = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['C_Sharp']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Ruby) AS total from Datos WHERE Ruby = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1033,6 +1184,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Ruby']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Ruby) AS total from Datos WHERE Ruby = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Ruby']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(SQL_1) AS total from Datos WHERE SQL_1 = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1057,6 +1212,10 @@
     $sql = "SELECT COUNT(SQL_1) AS total from Datos WHERE SQL_1 = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SQL_1']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(SQL_1) AS total from Datos WHERE SQL_1 = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['SQL_1']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -1088,6 +1247,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Android']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Android) AS total from Datos WHERE Android = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Android']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(ASP_NET) AS total from Datos WHERE ASP_NET = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1112,6 +1275,10 @@
     $sql = "SELECT COUNT(ASP_NET) AS total from Datos WHERE ASP_NET = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ASP_NET']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(ASP_NET) AS total from Datos WHERE ASP_NET = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['ASP_NET']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(HTML) AS total from Datos WHERE HTML = 'Certificado'";
@@ -1138,6 +1305,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['HTML']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(HTML) AS total from Datos WHERE HTML = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['HTML']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Java_Script) AS total from Datos WHERE Java_Script = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1163,6 +1334,9 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Java_Script']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Java_Script) AS total from Datos WHERE Java_Script = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Java_Script']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Visual_Basic) AS total from Datos WHERE Visual_Basic = 'Certificado'";
@@ -1189,6 +1363,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Visual_Basic']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Visual_Basic) AS total from Datos WHERE Visual_Basic = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Visual_Basic']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Phyton) AS total from Datos WHERE Phyton = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1214,6 +1392,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Phyton']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Phyton) AS total from Datos WHERE Phyton = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Phyton']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(SAP_ABAP) AS total from Datos WHERE SAP_ABAP = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1238,6 +1420,10 @@
     $sql = "SELECT COUNT(SAP_ABAP) AS total from Datos WHERE SAP_ABAP = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SAP_ABAP']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(SAP_ABAP) AS total from Datos WHERE SAP_ABAP = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['SAP_ABAP']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -1269,6 +1455,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Oracle']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Oracle) AS total from Datos WHERE Oracle = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Oracle']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(MySQL) AS total from Datos WHERE MySQL = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1293,6 +1483,10 @@
     $sql = "SELECT COUNT(MySQL) AS total from Datos WHERE MySQL = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['MySQL']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(MySQL) AS total from Datos WHERE MySQL = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['MySQL']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Postgre) AS total from Datos WHERE Postgre = 'Certificado'";
@@ -1319,6 +1513,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Postgre']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Postgre) AS total from Datos WHERE Postgre = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Postgre']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(JSF_2_0) AS total from Datos WHERE JSF_2_0 = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1344,6 +1542,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['JSF_2_0']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(JSF_2_0) AS total from Datos WHERE JSF_2_0 = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['JSF_2_0']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(Big_Data) AS total from Datos WHERE Big_Data = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Big_Data']['Certificado'] = mysqli_fetch_assoc($res);
@@ -1367,6 +1570,10 @@
     $sql = "SELECT COUNT(Big_Data) AS total from Datos WHERE Big_Data = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Big_Data']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Big_Data) AS total from Datos WHERE Big_Data = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Big_Data']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Hadoop) AS total from Datos WHERE Hadoop = 'Certificado'";
@@ -1393,6 +1600,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Hadoop']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Hadoop) AS total from Datos WHERE Hadoop = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Hadoop']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(SPARK) AS total from Datos WHERE SPARK = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SPARK']['Certificado'] = mysqli_fetch_assoc($res);
@@ -1416,6 +1628,10 @@
     $sql = "SELECT COUNT(SPARK) AS total from Datos WHERE SPARK = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SPARK']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(SPARK) AS total from Datos WHERE SPARK = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['SPARK']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     return $data;
@@ -1449,6 +1665,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Google_Maps']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Google_Maps) AS total from Datos WHERE Google_Maps = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Google_Maps']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(MapReduce) AS total from Datos WHERE MapReduce = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1473,6 +1693,10 @@
     $sql = "SELECT COUNT(MapReduce) AS total from Datos WHERE MapReduce = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['MapReduce']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(MapReduce) AS total from Datos WHERE MapReduce = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['MapReduce']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Tomcat) AS total from Datos WHERE Tomcat = 'Certificado'";
@@ -1499,6 +1723,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Tomcat']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Tomcat) AS total from Datos WHERE Tomcat = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Tomcat']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Weblogic) AS total from Datos WHERE Weblogic = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1523,6 +1751,10 @@
     $sql = "SELECT COUNT(Weblogic) AS total from Datos WHERE Weblogic = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Weblogic']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Weblogic) AS total from Datos WHERE Weblogic = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Weblogic']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(ISS) AS total from Datos WHERE ISS = 'Certificado'";
@@ -1549,6 +1781,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['ISS']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(ISS) AS total from Datos WHERE ISS = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['ISS']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(BlockChain) AS total from Datos WHERE BlockChain = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1574,6 +1810,11 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['BlockChain']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(BlockChain) AS total from Datos WHERE BlockChain = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['BlockChain']['Ninguno'] = mysqli_fetch_assoc($res);
+
+
     $sql = "SELECT COUNT(Wordpress) AS total from Datos WHERE Wordpress = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Wordpress']['Certificado'] = mysqli_fetch_assoc($res);
@@ -1597,6 +1838,10 @@
     $sql = "SELECT COUNT(Wordpress) AS total from Datos WHERE Wordpress = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Wordpress']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Wordpress) AS total from Datos WHERE Wordpress = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Wordpress']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -1628,6 +1873,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Joomla']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Joomla) AS total from Datos WHERE Joomla = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Joomla']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Sharepoint) AS total from Datos WHERE Sharepoint = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1652,6 +1901,10 @@
     $sql = "SELECT COUNT(Sharepoint) AS total from Datos WHERE Sharepoint = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Sharepoint']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Sharepoint) AS total from Datos WHERE Sharepoint = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Sharepoint']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Hybernate) AS total from Datos WHERE Hybernate = 'Certificado'";
@@ -1678,6 +1931,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Hybernate']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Hybernate) AS total from Datos WHERE Hybernate = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Hybernate']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Angular) AS total from Datos WHERE Angular = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1702,6 +1959,10 @@
     $sql = "SELECT COUNT(Angular) AS total from Datos WHERE Angular = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Angular']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Angular) AS total from Datos WHERE Angular = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Angular']['Ninguno'] = mysqli_fetch_assoc($res);
 
 
     $sql = "SELECT COUNT(Ember) AS total from Datos WHERE Ember = 'Certificado'";
@@ -1728,6 +1989,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Ember']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Ember) AS total from Datos WHERE Ember = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Ember']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(JSON) AS total from Datos WHERE JSON = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1753,6 +2018,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['JSON']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(JSON) AS total from Datos WHERE JSON = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['JSON']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(IONIC) AS total from Datos WHERE IONIC = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1777,6 +2046,10 @@
     $sql = "SELECT COUNT(IONIC) AS total from Datos WHERE IONIC = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['IONIC']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(IONIC) AS total from Datos WHERE IONIC = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['IONIC']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -1808,6 +2081,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['SPRING']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(SPRING) AS total from Datos WHERE SPRING = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['SPRING']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Google_AD_Words) AS total from Datos WHERE Google_AD_Words = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1833,6 +2110,10 @@
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Google_AD_Words']['Nocion'] = mysqli_fetch_assoc($res);
 
+    $sql = "SELECT COUNT(Google_AD_Words) AS total from Datos WHERE Google_AD_Words = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Google_AD_Words']['Ninguno'] = mysqli_fetch_assoc($res);
+
 
     $sql = "SELECT COUNT(Google_Analitics) AS total from Datos WHERE Google_Analitics = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
@@ -1857,6 +2138,10 @@
     $sql = "SELECT COUNT(Google_Analitics) AS total from Datos WHERE Google_Analitics = 'Dominio (nocion)'";
     $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
     $data['Google_Analitics']['Nocion'] = mysqli_fetch_assoc($res);
+
+    $sql = "SELECT COUNT(Google_Analitics) AS total from Datos WHERE Google_Analitics = 'Dominio (ninguno)'";
+    $res = mysqli_query($conexion, $sql) or die("Error: " + mysqli_error($conexion));
+    $data['Google_Analitics']['Ninguno'] = mysqli_fetch_assoc($res);
 
     return $data;
   }
@@ -2934,11 +3219,20 @@
     while($reg = mysqli_fetch_assoc($res)){
         $data['Avanzado'][] = $reg;
     }
-    $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Curso oficial sin certificacion'";
-    $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
-    while($reg = mysqli_fetch_assoc($res)){
-        $data['Curso'][] = $reg;
+    if($dato == "Soluciones_en_la_nube_Amazon" || $dato == "Soluciones_en_la_nube_Azure"){
+      $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Con curso oficial sin certificacion'";
+      $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
+      while($reg = mysqli_fetch_assoc($res)){
+          $data['Curso'][] = $reg;
+      }
+    } else {
+      $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Con curso oficial sin certificacion'";
+      $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
+      while($reg = mysqli_fetch_assoc($res)){
+          $data['Curso'][] = $reg;
+      }
     }
+    
     $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
     while($reg = mysqli_fetch_assoc($res)){

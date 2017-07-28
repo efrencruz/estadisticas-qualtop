@@ -1,3 +1,9 @@
+.lista {
+  width: 220px;
+  height: 592px;
+  overflow-y: auto;
+}
+
 table {
   width: 100%;
 }
