@@ -24,6 +24,7 @@ export class ReportesComponent implements OnInit {
 
   public seleccionado:boolean = false;
   public tipo:string = "";
+  public cargando:boolean = true;
 
   public solucion:boolean = false;
   public idioma:boolean = true;
@@ -551,8 +552,10 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerHerramientas1(){
+    this.cargando = true;
     this._datos.obtenerHerramientas1().subscribe(
       data => {
+        this.cargando = false;
         this.idioma = false;
         this.herramienta1 = true;
         this.herramienta2 = false;
@@ -656,8 +659,10 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerHerramientas2(){
+    this.cargando = true;
     this._datos.obtenerHerramientas2().subscribe(
       data => {
+        this.cargando = false;
         this.idioma = false;
         this.herramienta1 = false;
         this.herramienta2 = true;
@@ -2265,103 +2270,131 @@ export class ReportesComponent implements OnInit {
     $("#m2").removeClass("list-group-item-info");
   }
 
+  quitarGraficas(){
+    this.ninguno = false;
+    this.nocion = false;
+    this.basico = false;
+    this.intermedio = false;
+    this.avanzado = false;
+    this.curso = false;
+    this.certificado = false;
+    this.seleccionado = false;
+  }
+
   verHerramientas1(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#h1").addClass("list-group-item-info");
     this.obtenerHerramientas1();
   }
 
   verHerramientas2(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#h2").addClass("list-group-item-info");
     this.obtenerHerramientas2();
   }
 
   verHerramientas3(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#h3").addClass("list-group-item-info");
     this.obtenerHerramientas3();
   }
 
   verHerramientas4(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#h4").addClass("list-group-item-info");
     this.obtenerHerramientas4();
   }
 
   verHerramientas5(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#h5").addClass("list-group-item-info");
     this.obtenerHerramientas5();
   }
 
   verLenguajes1(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l1").addClass("list-group-item-info");
     this.obtenerLenguajes1();
   }
 
   verLenguajes2(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l2").addClass("list-group-item-info");
     this.obtenerLenguajes2();
   }
 
   verLenguajes3(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l3").addClass("list-group-item-info");
     this.obtenerLenguajes3();
   }
 
   verLenguajes4(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l4").addClass("list-group-item-info");
     this.obtenerLenguajes4();
   }
 
   verLenguajes5(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l5").addClass("list-group-item-info");
     this.obtenerLenguajes5();
   }
 
   verLenguajes6(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#l6").addClass("list-group-item-info");
     this.obtenerLenguajes6();
   }
 
   verSoluciones(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#s").addClass("list-group-item-info");
     this.obtenerSoluciones();
   }
 
   verCertificaciones1(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#c1").addClass("list-group-item-info");
     this.obtenerCertificaciones1();
   }
 
   verCertificaciones2(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#c2").addClass("list-group-item-info");
     this.obtenerCertificaciones2();
   }
 
   verCertificaciones3(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#c3").addClass("list-group-item-info");
     this.obtenerCertificaciones3();
   }
 
   verMetodologias1(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#m1").addClass("list-group-item-info");
     this.obtenerMetodologias1();
   }
 
   verMetodologias2(){
+    this.quitarGraficas();
     this.descativarOpcionesMenu();
     $("#m2").addClass("list-group-item-info");
     this.obtenerMetodologias2();

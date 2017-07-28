@@ -189,18 +189,20 @@
     </div>
 
     <hr>
+    <div *ngIf="seleccionado">
+      <h3 align="center">{{tipo}}</h3>
+      <ul class="nav nav-tabs nav-justified">
+        <li id="certificadoMenu" (click)="verLista('certificado')" class="active"><a href="#">Certificado</a></li>
+        <li id="cursoMenu" (click)="verLista('curso')" class=""><a href="#">Curso sin certificación</a></li>
+        <li id="avanzadoMenu" (click)="verLista('avanzado')" class=""><a href="#">Avanzado</a></li>
+        <li id="intermedioMenu" (click)="verLista('intermedio')" class=""><a href="#">Intermedio</a></li>
+        <li id="basicoMenu" (click)="verLista('basico')" class=""><a href="#">Básico</a></li>
+        <li id="nocionMenu" (click)="verLista('nocion')" class=""><a href="#">Noción</a></li>
+        <li id="ningunoMenu" (click)="verLista('ninguno')" class=""><a href="#">Ninguno</a></li>
+      </ul>
+    </div>
 
-    <h3>{{tipo}}</h3>
-
-    <ul *ngIf="seleccionado" class="nav nav-tabs nav-justified">
-      <li id="certificadoMenu" (click)="verLista('certificado')" class="active"><a href="#">Certificado</a></li>
-      <li id="cursoMenu" (click)="verLista('curso')" class=""><a href="#">Curso sin certificación</a></li>
-      <li id="avanzadoMenu" (click)="verLista('avanzado')" class=""><a href="#">Avanzado</a></li>
-      <li id="intermedioMenu" (click)="verLista('intermedio')" class=""><a href="#">Intermedio</a></li>
-      <li id="basicoMenu" (click)="verLista('basico')" class=""><a href="#">Básico</a></li>
-      <li id="nocionMenu" (click)="verLista('nocion')" class=""><a href="#">Noción</a></li>
-      <li id="ningunoMenu" (click)="verLista('ninguno')" class=""><a href="#">Ninguno</a></li>
-    </ul>
+    <!--<div *ngIf="cargando" id="cargando" class="loader"></div>-->
 
     <div id="certificado" *ngIf="certificado">
       <h4 class="text-primary">Certificado</h4>
