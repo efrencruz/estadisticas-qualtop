@@ -602,10 +602,8 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta.length; y++){
             let label = this.barChartLabelsHerramienta[y].split(" ").join("_");
-            //console.log(label+" | "+nivel_label[x]+" | "+this.her[label][nivel_label[x]].total);
             numeros[y] = parseInt(this.her[label][nivel_label[x]].total);
           }
-          
           this.clone[x].data = numeros;
           this.clone[x].label = nivel_label[x];
         }
