@@ -16,6 +16,14 @@ export class DatosService {
       .map(res =>res.json());
   }
 
+  obtenerDatosGrafica(tipo, cantidad, datos){
+    let params = { op:'obtenerDatosGrafica', tipo, cantidad, datos};
+    let headers = new Headers();
+    headers.append('Content-Type','application/x-www-form-urlencoded');
+    return this.__http.post(this.url+'datos.php',params)
+      .map(res =>res.json());
+  }
+
   obtenerIdiomas(){
     let params = { op:'obtenerIdiomas'};
     let headers = new Headers();
@@ -23,7 +31,7 @@ export class DatosService {
     return this.__http.post(this.url+'datos.php',params)
       .map(res =>res.json());
   }
-
+/* 
   obtenerHerramientas1(){
     let params = { op:'obtenerHerramientas1'};
     let headers = new Headers();
@@ -159,5 +167,5 @@ export class DatosService {
     return this.__http.post(this.url+'datos.php',params)
       .map(res =>res.json());
   }
-
+*/
 }

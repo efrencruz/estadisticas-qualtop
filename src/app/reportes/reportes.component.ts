@@ -133,6 +133,24 @@ export class ReportesComponent implements OnInit {
     }
   ];
 
+  public clone:any[] = [
+    {
+      data:[0,0,0,0,0,0,0],label:"A"
+    },{
+      data:[0,0,0,0,0,0,0],label:"B"
+    },{
+      data:[0,0,0,0,0,0,0],label:"C"
+    },{
+      data:[0,0,0,0,0,0,0],label:"D"
+    },{
+      data:[0,0,0,0,0,0,0],label:"E"
+    },{
+      data:[0,0,0,0,0,0,0],label:"F"
+    },{
+      data:[0,0,0,0,0,0,0],label:"G"
+    }
+  ];
+
   public barChartDataHerramienta:any[] = [
     {
       data:[0,0,0,0,0,0,0],label:"A"
@@ -553,8 +571,10 @@ export class ReportesComponent implements OnInit {
 
   obtenerHerramientas1(){
     this.cargando = true;
-    this._datos.obtenerHerramientas1().subscribe(
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta).subscribe(
+    //this._datos.obtenerHerramientas1().subscribe(
       data => {
+        //console.log(data);
         this.cargando = false;
         this.idioma = false;
         this.herramienta1 = true;
@@ -575,7 +595,24 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her = data;
-        this.barChartDataHerramienta = [
+        let nivel_label = ["Certificado","Curso","Avanzado","Intermedio","Basico","Nocion","Ninguno"];
+        let numeros = [];
+        //console.log(this.her);
+        for(let x=0; x<nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta.length; y++){
+            let label = this.barChartLabelsHerramienta[y].split(" ").join("_");
+            //console.log(label+" | "+nivel_label[x]+" | "+this.her[label][nivel_label[x]].total);
+            numeros[y] = parseInt(this.her[label][nivel_label[x]].total);
+          }
+          
+          this.clone[x].data = numeros;
+          this.clone[x].label = nivel_label[x];
+        }
+
+        console.log(this.clone);
+        this.barChartDataHerramienta =  this.clone;
+        /* this.barChartDataHerramienta = [
           {
             data: [
               parseInt(this.her.Microsoft_Office.Certificado.total),
@@ -596,7 +633,7 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her.Bamboo.Curso.total),
               parseInt(this.her.JIRA_Portafolio.Curso.total),
               parseInt(this.her.ALM_HP.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
+            ],label: 'Curso'
           },
           {
             data: [
@@ -649,7 +686,9 @@ export class ReportesComponent implements OnInit {
               parseInt(this.her.ALM_HP.Ninguno.total)
             ],label: 'Ninguno'
           }
-        ];
+        ]; */ 
+
+        console.log(this.barChartDataHerramienta);
       },
       error => {
         console.log(error);
@@ -660,7 +699,8 @@ export class ReportesComponent implements OnInit {
 
   obtenerHerramientas2(){
     this.cargando = true;
-    this._datos.obtenerHerramientas2().subscribe(
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta2).subscribe(
+    //this._datos.obtenerHerramientas2().subscribe(
       data => {
         this.cargando = false;
         this.idioma = false;
@@ -766,7 +806,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerHerramientas3(){
-    this._datos.obtenerHerramientas3().subscribe(
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta3).subscribe(
+    //this._datos.obtenerHerramientas3().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -871,7 +912,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerHerramientas4(){
-    this._datos.obtenerHerramientas4().subscribe(
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta4).subscribe(
+    //this._datos.obtenerHerramientas4().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -976,7 +1018,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerHerramientas5(){
-    this._datos.obtenerHerramientas5().subscribe(
+    this._datos.obtenerDatosGrafica("herramienta",4,this.barChartLabelsHerramienta5).subscribe(
+    //this._datos.obtenerHerramientas5().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1060,7 +1103,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes1(){
-    this._datos.obtenerLenguajes1().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje1).subscribe(
+    //this._datos.obtenerLenguajes1().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1166,7 +1210,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes2(){
-    this._datos.obtenerLenguajes2().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje2).subscribe(
+    //this._datos.obtenerLenguajes2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1271,7 +1316,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes3(){
-    this._datos.obtenerLenguajes3().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje3).subscribe(
+    //this._datos.obtenerLenguajes3().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1376,7 +1422,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes4(){
-    this._datos.obtenerLenguajes4().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje4).subscribe(
+    //this._datos.obtenerLenguajes4().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1481,7 +1528,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes5(){
-    this._datos.obtenerLenguajes5().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje5).subscribe(
+    //this._datos.obtenerLenguajes5().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1586,7 +1634,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerLenguajes6(){
-    this._datos.obtenerLenguajes6().subscribe(
+    this._datos.obtenerDatosGrafica("lenguaje",3,this.barChartLabelsLenguaje6).subscribe(
+    //this._datos.obtenerLenguajes6().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1663,7 +1712,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerSoluciones(){
-    this._datos.obtenerSoluciones().subscribe(
+    this._datos.obtenerDatosGrafica("solucion",2,this.barChartLabelsSolucion).subscribe(
+    //this._datos.obtenerSoluciones().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1687,40 +1737,40 @@ export class ReportesComponent implements OnInit {
         this.barChartDataSolucion = [
           {
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Certificado.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Certificado.total)
+              parseInt(this.sol.Amazon.Certificado.total),
+              parseInt(this.sol.Azure.Certificado.total)
             ],label: 'Certificado'
           },
           {
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Curso.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Curso.total)
+              parseInt(this.sol.Amazon.Curso.total),
+              parseInt(this.sol.Azure.Curso.total)
             ],label: 'Curso oficial sin certificacion'
           },
           {
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Avanzado.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Avanzado.total)
+              parseInt(this.sol.Amazon.Avanzado.total),
+              parseInt(this.sol.Azure.Avanzado.total)
             ],label: 'Avanzado'
           },{
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Intermedio.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Intermedio.total)
+              parseInt(this.sol.Amazon.Intermedio.total),
+              parseInt(this.sol.Azure.Intermedio.total)
             ],label: 'Intermedio'
           },{
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Basico.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Basico.total)
+              parseInt(this.sol.Amazon.Basico.total),
+              parseInt(this.sol.Azure.Basico.total)
             ],label: 'Basico'
           },{
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Nocion.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Nocion.total)
+              parseInt(this.sol.Amazon.Nocion.total),
+              parseInt(this.sol.Azure.Nocion.total)
             ],label: 'Nocion'
           },{
             data: [
-              parseInt(this.sol.Soluciones_en_la_nube_Amazon.Ninguno.total),
-              parseInt(this.sol.Soluciones_en_la_nube_Azure.Ninguno.total)
+              parseInt(this.sol.Amazon.Ninguno.total),
+              parseInt(this.sol.Azure.Ninguno.total)
             ],label: 'Ninguno'
           }
         ];
@@ -1733,7 +1783,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerCertificaciones1(){
-    this._datos.obtenerCertificaciones1().subscribe(
+    this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion1).subscribe(
+    //this._datos.obtenerCertificaciones1().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1838,7 +1889,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerCertificaciones2(){
-    this._datos.obtenerCertificaciones2().subscribe(
+    this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion2).subscribe(
+    //this._datos.obtenerCertificaciones2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1943,7 +1995,8 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerCertificaciones3(){
-    this._datos.obtenerCertificaciones2().subscribe(
+    this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion3).subscribe(
+    //this._datos.obtenerCertificaciones2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -2048,8 +2101,10 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerMetodologias1(){
-    this._datos.obtenerMetodologias1().subscribe(
+    this._datos.obtenerDatosGrafica("metodologia",7,this.barChartLabelsMetodologia1).subscribe(
+    //this._datos.obtenerMetodologias1().subscribe(
       data => {
+        //console.log(data);
         this.idioma = false;
         this.herramienta1 = false;
         this.herramienta2 = false;
@@ -2072,75 +2127,75 @@ export class ReportesComponent implements OnInit {
         this.barChartDataCertificacion1 = [
           {
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Certificado.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Certificado.total),
-              parseInt(this.met1.Metodologias_ISEB.Certificado.total),
-              parseInt(this.met1.Metodologias_CAST.Certificado.total),
-              parseInt(this.met1.Metodologias_CSTE.Certificado.total),
-              parseInt(this.met1.Metodologias_CSQA.Certificado.total),
-              parseInt(this.met1.Metodologias_TMap.Certificado.total)
+              parseInt(this.met1.ISTQB.Certificado.total),
+              parseInt(this.met1.Agile_Testing.Certificado.total),
+              parseInt(this.met1.ISEB.Certificado.total),
+              parseInt(this.met1.CAST.Certificado.total),
+              parseInt(this.met1.CSTE.Certificado.total),
+              parseInt(this.met1.CSQA.Certificado.total),
+              parseInt(this.met1.TMap.Certificado.total)
             ],label: 'Certificado'
           },
           {
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Curso.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Curso.total),
-              parseInt(this.met1.Metodologias_ISEB.Curso.total),
-              parseInt(this.met1.Metodologias_CAST.Curso.total),
-              parseInt(this.met1.Metodologias_CSTE.Curso.total),
-              parseInt(this.met1.Metodologias_CSQA.Curso.total),
-              parseInt(this.met1.Metodologias_TMap.Curso.total)
+              parseInt(this.met1.ISTQB.Curso.total),
+              parseInt(this.met1.Agile_Testing.Curso.total),
+              parseInt(this.met1.ISEB.Curso.total),
+              parseInt(this.met1.CAST.Curso.total),
+              parseInt(this.met1.CSTE.Curso.total),
+              parseInt(this.met1.CSQA.Curso.total),
+              parseInt(this.met1.TMap.Curso.total)
             ],label: 'Curso oficial sin certificacion'
           },
           {
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Avanzado.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Avanzado.total),
-              parseInt(this.met1.Metodologias_ISEB.Avanzado.total),
-              parseInt(this.met1.Metodologias_CAST.Avanzado.total),
-              parseInt(this.met1.Metodologias_CSTE.Avanzado.total),
-              parseInt(this.met1.Metodologias_CSQA.Avanzado.total),
-              parseInt(this.met1.Metodologias_TMap.Avanzado.total)
+              parseInt(this.met1.ISTQB.Avanzado.total),
+              parseInt(this.met1.Agile_Testing.Avanzado.total),
+              parseInt(this.met1.ISEB.Avanzado.total),
+              parseInt(this.met1.CAST.Avanzado.total),
+              parseInt(this.met1.CSTE.Avanzado.total),
+              parseInt(this.met1.CSQA.Avanzado.total),
+              parseInt(this.met1.TMap.Avanzado.total)
             ],label: 'Avanzado'
           },{
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Intermedio.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Intermedio.total),
-              parseInt(this.met1.Metodologias_ISEB.Intermedio.total),
-              parseInt(this.met1.Metodologias_CAST.Intermedio.total),
-              parseInt(this.met1.Metodologias_CSTE.Intermedio.total),
-              parseInt(this.met1.Metodologias_CSQA.Intermedio.total),
-              parseInt(this.met1.Metodologias_TMap.Intermedio.total)
+              parseInt(this.met1.ISTQB.Intermedio.total),
+              parseInt(this.met1.Agile_Testing.Intermedio.total),
+              parseInt(this.met1.ISEB.Intermedio.total),
+              parseInt(this.met1.CAST.Intermedio.total),
+              parseInt(this.met1.CSTE.Intermedio.total),
+              parseInt(this.met1.CSQA.Intermedio.total),
+              parseInt(this.met1.TMap.Intermedio.total)
             ],label: 'Intermedio'
           },{
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Basico.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Basico.total),
-              parseInt(this.met1.Metodologias_ISEB.Basico.total),
-              parseInt(this.met1.Metodologias_CAST.Basico.total),
-              parseInt(this.met1.Metodologias_CSTE.Basico.total),
-              parseInt(this.met1.Metodologias_CSQA.Basico.total),
-              parseInt(this.met1.Metodologias_TMap.Basico.total)
+              parseInt(this.met1.ISTQB.Basico.total),
+              parseInt(this.met1.Agile_Testing.Basico.total),
+              parseInt(this.met1.ISEB.Basico.total),
+              parseInt(this.met1.CAST.Basico.total),
+              parseInt(this.met1.CSTE.Basico.total),
+              parseInt(this.met1.CSQA.Basico.total),
+              parseInt(this.met1.TMap.Basico.total)
             ],label: 'Basico'
           },{
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Nocion.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Nocion.total),
-              parseInt(this.met1.Metodologias_ISEB.Nocion.total),
-              parseInt(this.met1.Metodologias_CAST.Nocion.total),
-              parseInt(this.met1.Metodologias_CSTE.Nocion.total),
-              parseInt(this.met1.Metodologias_CSQA.Nocion.total),
-              parseInt(this.met1.Metodologias_TMap.Nocion.total)
+              parseInt(this.met1.ISTQB.Nocion.total),
+              parseInt(this.met1.Agile_Testing.Nocion.total),
+              parseInt(this.met1.ISEB.Nocion.total),
+              parseInt(this.met1.CAST.Nocion.total),
+              parseInt(this.met1.CSTE.Nocion.total),
+              parseInt(this.met1.CSQA.Nocion.total),
+              parseInt(this.met1.TMap.Nocion.total)
             ],label: 'Nocion'
           },{
             data: [
-              parseInt(this.met1.Metodologias_ISTQB.Ninguno.total),
-              parseInt(this.met1.Metodologias_Agile_Testing.Ninguno.total),
-              parseInt(this.met1.Metodologias_ISEB.Ninguno.total),
-              parseInt(this.met1.Metodologias_CAST.Ninguno.total),
-              parseInt(this.met1.Metodologias_CSTE.Ninguno.total),
-              parseInt(this.met1.Metodologias_CSQA.Ninguno.total),
-              parseInt(this.met1.Metodologias_TMap.Ninguno.total)
+              parseInt(this.met1.ISTQB.Ninguno.total),
+              parseInt(this.met1.Agile_Testing.Ninguno.total),
+              parseInt(this.met1.ISEB.Ninguno.total),
+              parseInt(this.met1.CAST.Ninguno.total),
+              parseInt(this.met1.CSTE.Ninguno.total),
+              parseInt(this.met1.CSQA.Ninguno.total),
+              parseInt(this.met1.TMap.Ninguno.total)
             ],label: 'Ninguno'
           }
         ];
@@ -2153,9 +2208,10 @@ export class ReportesComponent implements OnInit {
   }
 
   obtenerMetodologias2(){
-    this._datos.obtenerMetodologias2().subscribe(
+    this._datos.obtenerDatosGrafica("metodologia",5,this.barChartLabelsMetodologia2).subscribe(
+    //this._datos.obtenerMetodologias2().subscribe(
       data => {
-        console.log(data);
+        //console.log(data);
         this.idioma = false;
         this.herramienta1 = false;
         this.herramienta2 = false;
@@ -2178,61 +2234,61 @@ export class ReportesComponent implements OnInit {
         this.barChartDataMetodologia = [
           {
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Certificado.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Certificado.total),
-              parseInt(this.met2.Metodologias_SCENT.Certificado.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Certificado.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Certificado.total)
+              parseInt(this.met2.TMMi.Certificado.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Certificado.total),
+              parseInt(this.met2.SCENT.Certificado.total),
+              parseInt(this.met2.AGEDIS.Certificado.total),
+              parseInt(this.met2.ITIL_QA.Certificado.total)
             ],label: 'Certificado'
           },
           {
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Curso.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Curso.total),
-              parseInt(this.met2.Metodologias_SCENT.Curso.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Curso.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Curso.total)
+              parseInt(this.met2.TMMi.Curso.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Curso.total),
+              parseInt(this.met2.SCENT.Curso.total),
+              parseInt(this.met2.AGEDIS.Curso.total),
+              parseInt(this.met2.ITIL_QA.Curso.total)
             ],label: 'Curso oficial sin certificacion'
           },
           {
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Avanzado.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Avanzado.total),
-              parseInt(this.met2.Metodologias_SCENT.Avanzado.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Avanzado.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Avanzado.total)
+              parseInt(this.met2.TMMi.Avanzado.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Avanzado.total),
+              parseInt(this.met2.SCENT.Avanzado.total),
+              parseInt(this.met2.AGEDIS.Avanzado.total),
+              parseInt(this.met2.ITIL_QA.Avanzado.total)
             ],label: 'Avanzado'
           },{
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Intermedio.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Intermedio.total),
-              parseInt(this.met2.Metodologias_SCENT.Intermedio.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Intermedio.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Intermedio.total)
+              parseInt(this.met2.TMMi.Intermedio.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Intermedio.total),
+              parseInt(this.met2.SCENT.Intermedio.total),
+              parseInt(this.met2.AGEDIS.Intermedio.total),
+              parseInt(this.met2.ITIL_QA.Intermedio.total)
             ],label: 'Intermedio'
           },{
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Basico.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Basico.total),
-              parseInt(this.met2.Metodologias_SCENT.Basico.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Basico.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Basico.total)
+              parseInt(this.met2.TMMi.Basico.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Basico.total),
+              parseInt(this.met2.SCENT.Basico.total),
+              parseInt(this.met2.AGEDIS.Basico.total),
+              parseInt(this.met2.ITIL_QA.Basico.total)
             ],label: 'Basico'
           },{
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Nocion.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Nocion.total),
-              parseInt(this.met2.Metodologias_SCENT.Nocion.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Nocion.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Nocion.total)
+              parseInt(this.met2.TMMi.Nocion.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Nocion.total),
+              parseInt(this.met2.SCENT.Nocion.total),
+              parseInt(this.met2.AGEDIS.Nocion.total),
+              parseInt(this.met2.ITIL_QA.Nocion.total)
             ],label: 'Nocion'
           },{
             data: [
-              parseInt(this.met2.Metodologias_TMMi.Ninguno.total),
-              parseInt(this.met2.Metodologias_CMMI_PPQA_VER_VAL.Ninguno.total),
-              parseInt(this.met2.Metodologias_SCENT.Ninguno.total),
-              parseInt(this.met2.Metodologias_AGEDIS.Ninguno.total),
-              parseInt(this.met2.Metodologias_ITIL_QA.Ninguno.total)
+              parseInt(this.met2.TMMi.Ninguno.total),
+              parseInt(this.met2.CMMI_PPQA_VER_VAL.Ninguno.total),
+              parseInt(this.met2.SCENT.Ninguno.total),
+              parseInt(this.met2.AGEDIS.Ninguno.total),
+              parseInt(this.met2.ITIL_QA.Ninguno.total)
               
             ],label: 'Ninguno'
           }
