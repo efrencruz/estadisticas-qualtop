@@ -66,24 +66,7 @@ export class ReportesComponent implements OnInit {
   public her5:any = {};
 
   public barChartLabelsIdioma:string[] = ['Ingles', 'Frances', 'Italiano'];
-  
-  public barChartDataCertificacion1:any[] = [
-    {
-      data:[0,0,0,0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0,0,0,0],label:"F"
-    },{
-      data:[0,0,0,0,0,0,0],label:"G"
-    }
-  ];
+  public nivel_label:any = ["Certificado","Curso","Avanzado","Intermedio","Basico","Nocion","Ninguno"];
 
   public barChartDataIdioma:any[] = [
     {
@@ -97,43 +80,8 @@ export class ReportesComponent implements OnInit {
     }
   ];
 
-  public barChartDataSolucion:any[] = [
-    {
-      data:[0,0],label:"A"
-    },{
-      data:[0,0],label:"B"
-    },{
-      data:[0,0],label:"C"
-    },{
-      data:[0,0],label:"D"
-    },{
-      data:[0,0],label:"E"
-    },{
-      data:[0,0],label:"F"
-    },{
-      data:[0,0],label:"G"
-    }
-  ];
 
-  public barChartDataMetodologia:any[] = [
-    {
-      data:[0,0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0,0],label:"F"
-    },{
-      data:[0,0,0,0,0],label:"G"
-    }
-  ];
-
-  public clone:any[] = [
+  public barChartData:any[] = [
     {
       data:[0,0,0,0,0,0,0],label:"A"
     },{
@@ -150,61 +98,6 @@ export class ReportesComponent implements OnInit {
       data:[0,0,0,0,0,0,0],label:"G"
     }
   ];
-
-  public barChartDataHerramienta:any[] = [
-    {
-      data:[0,0,0,0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0,0,0,0],label:"F"
-    },{
-      data:[0,0,0,0,0,0,0],label:"G"
-    }
-  ];
-
-  public barChartDataHerramienta5:any[] = [
-    {
-      data:[0,0,0,0],label:"A"
-    },{
-      data:[0,0,0,0],label:"B"
-    },{
-      data:[0,0,0,0],label:"C"
-    },{
-      data:[0,0,0,0],label:"D"
-    },{
-      data:[0,0,0,0],label:"E"
-    },{
-      data:[0,0,0,0],label:"F"
-    },{
-      data:[0,0,0,0],label:"G"
-    }
-  ];
-
-  public barChartDataHerramienta6:any[] = [
-    {
-      data:[0,0,0],label:"A"
-    },{
-      data:[0,0,0],label:"B"
-    },{
-      data:[0,0,0],label:"C"
-    },{
-      data:[0,0,0],label:"D"
-    },{
-      data:[0,0,0],label:"E"
-    },{
-      data:[0,0,0],label:"F"
-    },{
-      data:[0,0,0],label:"G"
-    }
-  ];
-
 
 
   public barChartLabelsMetodologia1:string[] = [
@@ -270,6 +163,59 @@ export class ReportesComponent implements OnInit {
     'Sharepoint', 'Hybernate',
     'Angular','Ember',
     'JSON','IONIC'
+  ];  
+
+  public barChartLabelsHerramienta14:string[] = [
+    'NeoLoad', 'WebLOAD_Professional', 'Forecast',
+    'ANTIS_Advanced_NET_Testing_System', 'Webserver_Stress_Tool', 'Load_Impact'
+  ];
+
+  public barChartLabelsHerramienta13:string[] = [
+    'QA_Wizard', 'Squish', 'vTest',
+    'Internet_Macros', 'Testdroid', 'HP_LoadRunner',
+    'LoadStorm'
+  ];
+
+  public barChartLabelsHerramienta12:string[] = [
+    'TestRail', 'QuickTest_Pro', 'SeeTest',
+    'Rational_Robot', 'Sahi', 'SoapTest',
+    'Test_Complete'
+  ];
+
+  public barChartLabelsHerramienta11:string[] = [
+    'SMARTS', 'QAS_Test_Case_Studio', 'PractiTest',
+    'SpiraTest', 'TestLog', 'ApTest_Manager',
+    'Zephyr'
+  ];
+
+  public barChartLabelsHerramienta10:string[] = [
+    'FunkLoad', 'FWPTT_load_testing', 'LoadUI',
+    'JMeter', 'HP_Quality_Center_ALM', 'QA_Complete',
+    'T-Plan_Professional'
+  ];
+
+  public barChartLabelsHerramienta9:string[] = [
+    'Canoo_WebTest', 'Solex', 'Imprimatur',
+    'SAMIE', 'ITP', 'WET',
+    'Weblnject'
+  ];
+
+  public barChartLabelsHerramienta8:string[] = [
+    'Selenium', 'Apium', 'Selendroid',
+    'Soapui', 'Watir_Ruby', 'Watin_Net',
+    'Capedit'
+  ];
+
+  public barChartLabelsHerramienta7:string[] = [
+    'Test_Environment_Toolkit', 'TestLink', 'Testitool',
+    'XQual_Studio', 'Radi-testdir', 'Data_Generator',
+    'Mantis'
+  ];
+
+  public barChartLabelsHerramienta6:string[] = [
+    'Bugzila_Testopia', 'FitNesse', 'qaManager',
+    'qaBook', 'RTH_open_source', 'Salome_tmf',
+    'Squash_TM'
   ];
     					
   public barChartLabelsHerramienta5:string[] = [
@@ -321,21 +267,12 @@ export class ReportesComponent implements OnInit {
     if(e.active.length > 0){
       this.tipo = e.active[0]._model.label;
       let lista = this.tipo;
-        if(lista == "C++"){
-          lista = "C_plus_plus";
-        }
-        if(lista == "C#"){
-          lista = "C_Sharp";
-        }
-        if(lista == "SQL"){
-          lista = "SQL_1";
-        }
-        if(lista == "ASP.NET"){
-          lista = "ASP_NET";
-        }
-        if(lista == "JSF 2.0"){
-          lista = "JSF_2_0";
-        }
+        if(lista == "C++"){ lista = "C_plus_plus"; }
+        if(lista == "C#"){ lista = "C_Sharp"; }
+        if(lista == "SQL"){ lista = "SQL_1"; }
+        if(lista == "ASP.NET"){ lista = "ASP_NET"; }
+        if(lista == "JSF 2.0"){ lista = "JSF_2_0"; }
+
       lista = lista.split(" ").join("_");
       this._datos.obtenerDatos(lista).subscribe(
         data => {
@@ -572,9 +509,7 @@ export class ReportesComponent implements OnInit {
   obtenerHerramientas1(){
     this.cargando = true;
     this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta).subscribe(
-    //this._datos.obtenerHerramientas1().subscribe(
       data => {
-        //console.log(data);
         this.cargando = false;
         this.idioma = false;
         this.herramienta1 = true;
@@ -595,98 +530,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her = data;
-        let nivel_label = ["Certificado","Curso","Avanzado","Intermedio","Basico","Nocion","Ninguno"];
+
         let numeros = [];
-        //console.log(this.her);
-        for(let x=0; x<nivel_label.length; x++){
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta.length; y++){
             let label = this.barChartLabelsHerramienta[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her[label][nivel_label[x]].total);
+            numeros[y] = parseInt(this.her[label][this.nivel_label[x]].total);
           }
-          this.clone[x].data = numeros;
-          this.clone[x].label = nivel_label[x];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
         }
-
-        console.log(this.clone);
-        this.barChartDataHerramienta =  this.clone;
-        /* this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.her.Microsoft_Office.Certificado.total),
-              parseInt(this.her.JIRA.Certificado.total),
-              parseInt(this.her.Confluence.Certificado.total),
-              parseInt(this.her.Visual_Studio.Certificado.total),
-              parseInt(this.her.Bamboo.Certificado.total),
-              parseInt(this.her.JIRA_Portafolio.Certificado.total),
-              parseInt(this.her.ALM_HP.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.her.Microsoft_Office.Curso.total),
-              parseInt(this.her.JIRA.Curso.total),
-              parseInt(this.her.Confluence.Curso.total),
-              parseInt(this.her.Visual_Studio.Curso.total),
-              parseInt(this.her.Bamboo.Curso.total),
-              parseInt(this.her.JIRA_Portafolio.Curso.total),
-              parseInt(this.her.ALM_HP.Curso.total)
-            ],label: 'Curso'
-          },
-          {
-            data: [
-              parseInt(this.her.Microsoft_Office.Avanzado.total),
-              parseInt(this.her.JIRA.Avanzado.total),
-              parseInt(this.her.Confluence.Avanzado.total),
-              parseInt(this.her.Visual_Studio.Avanzado.total),
-              parseInt(this.her.Bamboo.Avanzado.total),
-              parseInt(this.her.JIRA_Portafolio.Avanzado.total),
-              parseInt(this.her.ALM_HP.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.her.Microsoft_Office.Intermedio.total),
-              parseInt(this.her.JIRA.Intermedio.total),
-              parseInt(this.her.Confluence.Intermedio.total),
-              parseInt(this.her.Visual_Studio.Intermedio.total),
-              parseInt(this.her.Bamboo.Intermedio.total),
-              parseInt(this.her.JIRA_Portafolio.Intermedio.total),
-              parseInt(this.her.ALM_HP.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.her.Microsoft_Office.Basico.total),
-              parseInt(this.her.JIRA.Basico.total),
-              parseInt(this.her.Confluence.Basico.total),
-              parseInt(this.her.Visual_Studio.Basico.total),
-              parseInt(this.her.Bamboo.Basico.total),
-              parseInt(this.her.JIRA_Portafolio.Basico.total),
-              parseInt(this.her.ALM_HP.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.her.Microsoft_Office.Nocion.total),
-              parseInt(this.her.JIRA.Nocion.total),
-              parseInt(this.her.Confluence.Nocion.total),
-              parseInt(this.her.Visual_Studio.Nocion.total),
-              parseInt(this.her.Bamboo.Nocion.total),
-              parseInt(this.her.JIRA_Portafolio.Nocion.total),
-              parseInt(this.her.ALM_HP.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.her.Microsoft_Office.Ninguno.total),
-              parseInt(this.her.JIRA.Ninguno.total),
-              parseInt(this.her.Confluence.Ninguno.total),
-              parseInt(this.her.Visual_Studio.Ninguno.total),
-              parseInt(this.her.Bamboo.Ninguno.total),
-              parseInt(this.her.JIRA_Portafolio.Ninguno.total),
-              parseInt(this.her.ALM_HP.Ninguno.total)
-            ],label: 'Ninguno'
-          }
-        ]; */ 
-
-        console.log(this.barChartDataHerramienta);
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -698,7 +556,6 @@ export class ReportesComponent implements OnInit {
   obtenerHerramientas2(){
     this.cargando = true;
     this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta2).subscribe(
-    //this._datos.obtenerHerramientas2().subscribe(
       data => {
         this.cargando = false;
         this.idioma = false;
@@ -720,81 +577,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her2 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.her2.Android_Studio.Certificado.total),
-              parseInt(this.her2.Balsamiq_Mockps.Certificado.total),
-              parseInt(this.her2.Bitbucket.Certificado.total),
-              parseInt(this.her2.Visio.Certificado.total),
-              parseInt(this.her2.PhotoShop.Certificado.total),
-              parseInt(this.her2.Ilustrator.Certificado.total),
-              parseInt(this.her2.Microsoft_Project.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.her2.Android_Studio.Curso.total),
-              parseInt(this.her2.Balsamiq_Mockps.Curso.total),
-              parseInt(this.her2.Bitbucket.Curso.total),
-              parseInt(this.her2.Visio.Curso.total),
-              parseInt(this.her2.PhotoShop.Curso.total),
-              parseInt(this.her2.Ilustrator.Curso.total),
-              parseInt(this.her2.Microsoft_Project.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.her2.Android_Studio.Avanzado.total),
-              parseInt(this.her2.Balsamiq_Mockps.Avanzado.total),
-              parseInt(this.her2.Bitbucket.Avanzado.total),
-              parseInt(this.her2.Visio.Avanzado.total),
-              parseInt(this.her2.PhotoShop.Avanzado.total),
-              parseInt(this.her2.Ilustrator.Avanzado.total),
-              parseInt(this.her2.Microsoft_Project.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.her2.Android_Studio.Intermedio.total),
-              parseInt(this.her2.Balsamiq_Mockps.Intermedio.total),
-              parseInt(this.her2.Bitbucket.Intermedio.total),
-              parseInt(this.her2.Visio.Intermedio.total),
-              parseInt(this.her2.PhotoShop.Intermedio.total),
-              parseInt(this.her2.Ilustrator.Intermedio.total),
-              parseInt(this.her2.Microsoft_Project.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.her2.Android_Studio.Basico.total),
-              parseInt(this.her2.Balsamiq_Mockps.Basico.total),
-              parseInt(this.her2.Bitbucket.Basico.total),
-              parseInt(this.her2.Visio.Basico.total),
-              parseInt(this.her2.PhotoShop.Basico.total),
-              parseInt(this.her2.Ilustrator.Basico.total),
-              parseInt(this.her2.Microsoft_Project.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.her2.Android_Studio.Nocion.total),
-              parseInt(this.her2.Balsamiq_Mockps.Nocion.total),
-              parseInt(this.her2.Bitbucket.Nocion.total),
-              parseInt(this.her2.Visio.Nocion.total),
-              parseInt(this.her2.PhotoShop.Nocion.total),
-              parseInt(this.her2.Ilustrator.Nocion.total),
-              parseInt(this.her2.Microsoft_Project.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.her2.Android_Studio.Ninguno.total),
-              parseInt(this.her2.Balsamiq_Mockps.Ninguno.total),
-              parseInt(this.her2.Bitbucket.Ninguno.total),
-              parseInt(this.her2.Visio.Ninguno.total),
-              parseInt(this.her2.PhotoShop.Ninguno.total),
-              parseInt(this.her2.Ilustrator.Ninguno.total),
-              parseInt(this.her2.Microsoft_Project.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta2.length; y++){
+            let label = this.barChartLabelsHerramienta2[y].split(" ").join("_");
+            numeros[y] = parseInt(this.her2[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -805,7 +602,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerHerramientas3(){
     this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta3).subscribe(
-    //this._datos.obtenerHerramientas3().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -826,81 +622,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her3 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.her3.SQL_Server.Certificado.total),
-              parseInt(this.her3.Sublime_text.Certificado.total),
-              parseInt(this.her3.Skype.Certificado.total),
-              parseInt(this.her3.Team_Viewer.Certificado.total),
-              parseInt(this.her3.GoTo_Meeting.Certificado.total),
-              parseInt(this.her3.HipChat.Certificado.total),
-              parseInt(this.her3.Appraisal_Assistant.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.her3.SQL_Server.Curso.total),
-              parseInt(this.her3.Sublime_text.Curso.total),
-              parseInt(this.her3.Skype.Curso.total),
-              parseInt(this.her3.Team_Viewer.Curso.total),
-              parseInt(this.her3.GoTo_Meeting.Curso.total),
-              parseInt(this.her3.HipChat.Curso.total),
-              parseInt(this.her3.Appraisal_Assistant.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.her3.SQL_Server.Avanzado.total),
-              parseInt(this.her3.Sublime_text.Avanzado.total),
-              parseInt(this.her3.Skype.Avanzado.total),
-              parseInt(this.her3.Team_Viewer.Avanzado.total),
-              parseInt(this.her3.GoTo_Meeting.Avanzado.total),
-              parseInt(this.her3.HipChat.Avanzado.total),
-              parseInt(this.her3.Appraisal_Assistant.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.her3.SQL_Server.Intermedio.total),
-              parseInt(this.her3.Sublime_text.Intermedio.total),
-              parseInt(this.her3.Skype.Intermedio.total),
-              parseInt(this.her3.Team_Viewer.Intermedio.total),
-              parseInt(this.her3.GoTo_Meeting.Intermedio.total),
-              parseInt(this.her3.HipChat.Intermedio.total),
-              parseInt(this.her3.Appraisal_Assistant.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.her3.SQL_Server.Basico.total),
-              parseInt(this.her3.Sublime_text.Basico.total),
-              parseInt(this.her3.Skype.Basico.total),
-              parseInt(this.her3.Team_Viewer.Basico.total),
-              parseInt(this.her3.GoTo_Meeting.Basico.total),
-              parseInt(this.her3.HipChat.Basico.total),
-              parseInt(this.her3.Appraisal_Assistant.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.her3.SQL_Server.Nocion.total),
-              parseInt(this.her3.Sublime_text.Nocion.total),
-              parseInt(this.her3.Skype.Nocion.total),
-              parseInt(this.her3.Team_Viewer.Nocion.total),
-              parseInt(this.her3.GoTo_Meeting.Nocion.total),
-              parseInt(this.her3.HipChat.Nocion.total),
-              parseInt(this.her3.Appraisal_Assistant.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.her3.SQL_Server.Ninguno.total),
-              parseInt(this.her3.Sublime_text.Ninguno.total),
-              parseInt(this.her3.Skype.Ninguno.total),
-              parseInt(this.her3.Team_Viewer.Ninguno.total),
-              parseInt(this.her3.GoTo_Meeting.Ninguno.total),
-              parseInt(this.her3.HipChat.Ninguno.total),
-              parseInt(this.her3.Appraisal_Assistant.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta3.length; y++){
+            let label = this.barChartLabelsHerramienta3[y].split(" ").join("_");
+            numeros[y] = parseInt(this.her3[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -911,7 +647,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerHerramientas4(){
     this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta4).subscribe(
-    //this._datos.obtenerHerramientas4().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -932,81 +667,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her4 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.her4.Dreamweaver.Certificado.total),
-              parseInt(this.her4.Net_Beans.Certificado.total),
-              parseInt(this.her4.Eclipse.Certificado.total),
-              parseInt(this.her4.ABAP_Workbech.Certificado.total),
-              parseInt(this.her4.ARIS.Certificado.total),
-              parseInt(this.her4.Opera.Certificado.total),
-              parseInt(this.her4.Bizagi.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.her4.Dreamweaver.Curso.total),
-              parseInt(this.her4.Net_Beans.Curso.total),
-              parseInt(this.her4.Eclipse.Curso.total),
-              parseInt(this.her4.ABAP_Workbech.Curso.total),
-              parseInt(this.her4.ARIS.Curso.total),
-              parseInt(this.her4.Opera.Curso.total),
-              parseInt(this.her4.Bizagi.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.her4.Dreamweaver.Avanzado.total),
-              parseInt(this.her4.Net_Beans.Avanzado.total),
-              parseInt(this.her4.Eclipse.Avanzado.total),
-              parseInt(this.her4.ABAP_Workbech.Avanzado.total),
-              parseInt(this.her4.ARIS.Avanzado.total),
-              parseInt(this.her4.Opera.Avanzado.total),
-              parseInt(this.her4.Bizagi.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.her4.Dreamweaver.Intermedio.total),
-              parseInt(this.her4.Net_Beans.Intermedio.total),
-              parseInt(this.her4.Eclipse.Intermedio.total),
-              parseInt(this.her4.ABAP_Workbech.Intermedio.total),
-              parseInt(this.her4.ARIS.Intermedio.total),
-              parseInt(this.her4.Opera.Intermedio.total),
-              parseInt(this.her4.Bizagi.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.her4.Dreamweaver.Basico.total),
-              parseInt(this.her4.Net_Beans.Basico.total),
-              parseInt(this.her4.Eclipse.Basico.total),
-              parseInt(this.her4.ABAP_Workbech.Basico.total),
-              parseInt(this.her4.ARIS.Basico.total),
-              parseInt(this.her4.Opera.Basico.total),
-              parseInt(this.her4.Bizagi.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.her4.Dreamweaver.Nocion.total),
-              parseInt(this.her4.Net_Beans.Nocion.total),
-              parseInt(this.her4.Eclipse.Nocion.total),
-              parseInt(this.her4.ABAP_Workbech.Nocion.total),
-              parseInt(this.her4.ARIS.Nocion.total),
-              parseInt(this.her4.Opera.Nocion.total),
-              parseInt(this.her4.Bizagi.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.her4.Dreamweaver.Ninguno.total),
-              parseInt(this.her4.Net_Beans.Ninguno.total),
-              parseInt(this.her4.Eclipse.Ninguno.total),
-              parseInt(this.her4.ABAP_Workbech.Ninguno.total),
-              parseInt(this.her4.ARIS.Ninguno.total),
-              parseInt(this.her4.Opera.Ninguno.total),
-              parseInt(this.her4.Bizagi.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta4.length; y++){
+            let label = this.barChartLabelsHerramienta4[y].split(" ").join("_");
+            numeros[y] = parseInt(this.her4[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1017,7 +692,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerHerramientas5(){
     this._datos.obtenerDatosGrafica("herramienta",4,this.barChartLabelsHerramienta5).subscribe(
-    //this._datos.obtenerHerramientas5().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1038,60 +712,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.her5 = data;
-        this.barChartDataHerramienta5 = [
-          {
-            data: [
-              parseInt(this.her5.Microsoft_Project.Certificado.total),
-              parseInt(this.her5.Excel.Certificado.total),
-              parseInt(this.her5.Power_Point.Certificado.total),
-              parseInt(this.her5.Word.Certificado.total),
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.her5.Microsoft_Project.Curso.total),
-              parseInt(this.her5.Excel.Curso.total),
-              parseInt(this.her5.Power_Point.Curso.total),
-              parseInt(this.her5.Word.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.her5.Microsoft_Project.Avanzado.total),
-              parseInt(this.her5.Excel.Avanzado.total),
-              parseInt(this.her5.Power_Point.Avanzado.total),
-              parseInt(this.her5.Word.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.her5.Microsoft_Project.Intermedio.total),
-              parseInt(this.her5.Excel.Intermedio.total),
-              parseInt(this.her5.Power_Point.Intermedio.total),
-              parseInt(this.her5.Word.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.her5.Microsoft_Project.Basico.total),
-              parseInt(this.her5.Excel.Basico.total),
-              parseInt(this.her5.Power_Point.Basico.total),
-              parseInt(this.her5.Word.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.her5.Microsoft_Project.Nocion.total),
-              parseInt(this.her5.Excel.Nocion.total),
-              parseInt(this.her5.Power_Point.Nocion.total),
-              parseInt(this.her5.Word.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.her5.Microsoft_Project.Ninguno.total),
-              parseInt(this.her5.Excel.Ninguno.total),
-              parseInt(this.her5.Power_Point.Ninguno.total),
-              parseInt(this.her5.Word.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta5.length; y++){
+            let label = this.barChartLabelsHerramienta5[y].split(" ").join("_");
+            numeros[y] = parseInt(this.her5[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1102,7 +737,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes1(){
     this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje1).subscribe(
-    //this._datos.obtenerLenguajes1().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1123,81 +757,24 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.len.Java.Certificado.total),
-              parseInt(this.len.C_plus_plus.Certificado.total),
-              parseInt(this.len.PHP.Certificado.total),
-              parseInt(this.len.iOS.Certificado.total),
-              parseInt(this.len.C_Sharp.Certificado.total),
-              parseInt(this.len.Ruby.Certificado.total),
-              parseInt(this.len.SQL_1.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len.Java.Curso.total),
-              parseInt(this.len.C_plus_plus.Curso.total),
-              parseInt(this.len.PHP.Curso.total),
-              parseInt(this.len.iOS.Curso.total),
-              parseInt(this.len.C_Sharp.Curso.total),
-              parseInt(this.len.Ruby.Curso.total),
-              parseInt(this.len.SQL_1.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len.Java.Avanzado.total),
-              parseInt(this.len.C_plus_plus.Avanzado.total),
-              parseInt(this.len.PHP.Avanzado.total),
-              parseInt(this.len.iOS.Avanzado.total),
-              parseInt(this.len.C_Sharp.Avanzado.total),
-              parseInt(this.len.Ruby.Avanzado.total),
-              parseInt(this.len.SQL_1.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len.Java.Intermedio.total),
-              parseInt(this.len.C_plus_plus.Intermedio.total),
-              parseInt(this.len.PHP.Intermedio.total),
-              parseInt(this.len.iOS.Intermedio.total),
-              parseInt(this.len.C_Sharp.Intermedio.total),
-              parseInt(this.len.Ruby.Intermedio.total),
-              parseInt(this.len.SQL_1.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len.Java.Basico.total),
-              parseInt(this.len.C_plus_plus.Basico.total),
-              parseInt(this.len.PHP.Basico.total),
-              parseInt(this.len.iOS.Basico.total),
-              parseInt(this.len.C_Sharp.Basico.total),
-              parseInt(this.len.Ruby.Basico.total),
-              parseInt(this.len.SQL_1.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len.Java.Nocion.total),
-              parseInt(this.len.C_plus_plus.Nocion.total),
-              parseInt(this.len.PHP.Nocion.total),
-              parseInt(this.len.iOS.Nocion.total),
-              parseInt(this.len.C_Sharp.Nocion.total),
-              parseInt(this.len.Ruby.Nocion.total),
-              parseInt(this.len.SQL_1.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len.Java.Ninguno.total),
-              parseInt(this.len.C_plus_plus.Ninguno.total),
-              parseInt(this.len.PHP.Ninguno.total),
-              parseInt(this.len.iOS.Ninguno.total),
-              parseInt(this.len.C_Sharp.Ninguno.total),
-              parseInt(this.len.Ruby.Ninguno.total),
-              parseInt(this.len.SQL_1.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje1.length; y++){
+            let label = this.barChartLabelsLenguaje1[y].split(" ").join("_");
+            if(label == "C++"){ label = "C_plus_plus"; }
+            if(label == "C#"){ label = "C_Sharp"; }
+            if(label == "SQL"){ label = "SQL_1"; }
+            numeros[y] = parseInt(this.len[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log("ERROR");
@@ -1209,7 +786,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes2(){
     this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje2).subscribe(
-    //this._datos.obtenerLenguajes2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1230,81 +806,22 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len2 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.len2.Android.Certificado.total),
-              parseInt(this.len2.ASP_NET.Certificado.total),
-              parseInt(this.len2.HTML.Certificado.total),
-              parseInt(this.len2.Java_Script.Certificado.total),
-              parseInt(this.len2.Visual_Basic.Certificado.total),
-              parseInt(this.len2.Phyton.Certificado.total),
-              parseInt(this.len2.SAP_ABAP.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len2.Android.Curso.total),
-              parseInt(this.len2.ASP_NET.Curso.total),
-              parseInt(this.len2.HTML.Curso.total),
-              parseInt(this.len2.Java_Script.Curso.total),
-              parseInt(this.len2.Visual_Basic.Curso.total),
-              parseInt(this.len2.Phyton.Curso.total),
-              parseInt(this.len2.SAP_ABAP.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len2.Android.Avanzado.total),
-              parseInt(this.len2.ASP_NET.Avanzado.total),
-              parseInt(this.len2.HTML.Avanzado.total),
-              parseInt(this.len2.Java_Script.Avanzado.total),
-              parseInt(this.len2.Visual_Basic.Avanzado.total),
-              parseInt(this.len2.Phyton.Avanzado.total),
-              parseInt(this.len2.SAP_ABAP.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len2.Android.Intermedio.total),
-              parseInt(this.len2.ASP_NET.Intermedio.total),
-              parseInt(this.len2.HTML.Intermedio.total),
-              parseInt(this.len2.Java_Script.Intermedio.total),
-              parseInt(this.len2.Visual_Basic.Intermedio.total),
-              parseInt(this.len2.Phyton.Intermedio.total),
-              parseInt(this.len2.SAP_ABAP.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len2.Android.Basico.total),
-              parseInt(this.len2.ASP_NET.Basico.total),
-              parseInt(this.len2.HTML.Basico.total),
-              parseInt(this.len2.Java_Script.Basico.total),
-              parseInt(this.len2.Visual_Basic.Basico.total),
-              parseInt(this.len2.Phyton.Basico.total),
-              parseInt(this.len2.SAP_ABAP.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len2.Android.Nocion.total),
-              parseInt(this.len2.ASP_NET.Nocion.total),
-              parseInt(this.len2.HTML.Nocion.total),
-              parseInt(this.len2.Java_Script.Nocion.total),
-              parseInt(this.len2.Visual_Basic.Nocion.total),
-              parseInt(this.len2.Phyton.Nocion.total),
-              parseInt(this.len2.SAP_ABAP.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len2.Android.Ninguno.total),
-              parseInt(this.len2.ASP_NET.Ninguno.total),
-              parseInt(this.len2.HTML.Ninguno.total),
-              parseInt(this.len2.Java_Script.Ninguno.total),
-              parseInt(this.len2.Visual_Basic.Ninguno.total),
-              parseInt(this.len2.Phyton.Ninguno.total),
-              parseInt(this.len2.SAP_ABAP.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje2.length; y++){
+            let label = this.barChartLabelsLenguaje2[y].split(" ").join("_");
+            if(label == "ASP.NET"){ label = "ASP_NET"; }
+            numeros[y] = parseInt(this.len2[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1315,7 +832,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes3(){
     this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje3).subscribe(
-    //this._datos.obtenerLenguajes3().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1336,81 +852,22 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len3 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.len3.Oracle.Certificado.total),
-              parseInt(this.len3.MySQL.Certificado.total),
-              parseInt(this.len3.Postgre.Certificado.total),
-              parseInt(this.len3.JSF_2_0.Certificado.total),
-              parseInt(this.len3.Big_Data.Certificado.total),
-              parseInt(this.len3.Hadoop.Certificado.total),
-              parseInt(this.len3.SPARK.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len3.Oracle.Curso.total),
-              parseInt(this.len3.MySQL.Curso.total),
-              parseInt(this.len3.Postgre.Curso.total),
-              parseInt(this.len3.JSF_2_0.Curso.total),
-              parseInt(this.len3.Big_Data.Curso.total),
-              parseInt(this.len3.Hadoop.Curso.total),
-              parseInt(this.len3.SPARK.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len3.Oracle.Avanzado.total),
-              parseInt(this.len3.MySQL.Avanzado.total),
-              parseInt(this.len3.Postgre.Avanzado.total),
-              parseInt(this.len3.JSF_2_0.Avanzado.total),
-              parseInt(this.len3.Big_Data.Avanzado.total),
-              parseInt(this.len3.Hadoop.Avanzado.total),
-              parseInt(this.len3.SPARK.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len3.Oracle.Intermedio.total),
-              parseInt(this.len3.MySQL.Intermedio.total),
-              parseInt(this.len3.Postgre.Intermedio.total),
-              parseInt(this.len3.JSF_2_0.Intermedio.total),
-              parseInt(this.len3.Big_Data.Intermedio.total),
-              parseInt(this.len3.Hadoop.Intermedio.total),
-              parseInt(this.len3.SPARK.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len3.Oracle.Basico.total),
-              parseInt(this.len3.MySQL.Basico.total),
-              parseInt(this.len3.Postgre.Basico.total),
-              parseInt(this.len3.JSF_2_0.Basico.total),
-              parseInt(this.len3.Big_Data.Basico.total),
-              parseInt(this.len3.Hadoop.Basico.total),
-              parseInt(this.len3.SPARK.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len3.Oracle.Nocion.total),
-              parseInt(this.len3.MySQL.Nocion.total),
-              parseInt(this.len3.Postgre.Nocion.total),
-              parseInt(this.len3.JSF_2_0.Nocion.total),
-              parseInt(this.len3.Big_Data.Nocion.total),
-              parseInt(this.len3.Hadoop.Nocion.total),
-              parseInt(this.len3.SPARK.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len3.Oracle.Ninguno.total),
-              parseInt(this.len3.MySQL.Ninguno.total),
-              parseInt(this.len3.Postgre.Ninguno.total),
-              parseInt(this.len3.JSF_2_0.Ninguno.total),
-              parseInt(this.len3.Big_Data.Ninguno.total),
-              parseInt(this.len3.Hadoop.Ninguno.total),
-              parseInt(this.len3.SPARK.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje3.length; y++){
+            let label = this.barChartLabelsLenguaje3[y].split(" ").join("_");
+            if(label == "JSF_2.0"){ label = "JSF_2_0"; }
+            numeros[y] = parseInt(this.len3[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1421,7 +878,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes4(){
     this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje4).subscribe(
-    //this._datos.obtenerLenguajes4().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1442,81 +898,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len4 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.len4.Google_Maps.Certificado.total),
-              parseInt(this.len4.MapReduce.Certificado.total),
-              parseInt(this.len4.Tomcat.Certificado.total),
-              parseInt(this.len4.Weblogic.Certificado.total),
-              parseInt(this.len4.ISS.Certificado.total),
-              parseInt(this.len4.BlockChain.Certificado.total),
-              parseInt(this.len4.Wordpress.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len4.Google_Maps.Curso.total),
-              parseInt(this.len4.MapReduce.Curso.total),
-              parseInt(this.len4.Tomcat.Curso.total),
-              parseInt(this.len4.Weblogic.Curso.total),
-              parseInt(this.len4.ISS.Curso.total),
-              parseInt(this.len4.BlockChain.Curso.total),
-              parseInt(this.len4.Wordpress.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len4.Google_Maps.Avanzado.total),
-              parseInt(this.len4.MapReduce.Avanzado.total),
-              parseInt(this.len4.Tomcat.Avanzado.total),
-              parseInt(this.len4.Weblogic.Avanzado.total),
-              parseInt(this.len4.ISS.Avanzado.total),
-              parseInt(this.len4.BlockChain.Avanzado.total),
-              parseInt(this.len4.Wordpress.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len4.Google_Maps.Intermedio.total),
-              parseInt(this.len4.MapReduce.Intermedio.total),
-              parseInt(this.len4.Tomcat.Intermedio.total),
-              parseInt(this.len4.Weblogic.Intermedio.total),
-              parseInt(this.len4.ISS.Intermedio.total),
-              parseInt(this.len4.BlockChain.Intermedio.total),
-              parseInt(this.len4.Wordpress.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len4.Google_Maps.Basico.total),
-              parseInt(this.len4.MapReduce.Basico.total),
-              parseInt(this.len4.Tomcat.Basico.total),
-              parseInt(this.len4.Weblogic.Basico.total),
-              parseInt(this.len4.ISS.Basico.total),
-              parseInt(this.len4.BlockChain.Basico.total),
-              parseInt(this.len4.Wordpress.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len4.Google_Maps.Nocion.total),
-              parseInt(this.len4.MapReduce.Nocion.total),
-              parseInt(this.len4.Tomcat.Nocion.total),
-              parseInt(this.len4.Weblogic.Nocion.total),
-              parseInt(this.len4.ISS.Nocion.total),
-              parseInt(this.len4.BlockChain.Nocion.total),
-              parseInt(this.len4.Wordpress.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len4.Google_Maps.Ninguno.total),
-              parseInt(this.len4.MapReduce.Ninguno.total),
-              parseInt(this.len4.Tomcat.Ninguno.total),
-              parseInt(this.len4.Weblogic.Ninguno.total),
-              parseInt(this.len4.ISS.Ninguno.total),
-              parseInt(this.len4.BlockChain.Ninguno.total),
-              parseInt(this.len4.Wordpress.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje4.length; y++){
+            let label = this.barChartLabelsLenguaje4[y].split(" ").join("_");
+            numeros[y] = parseInt(this.len4[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1527,7 +923,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes5(){
     this._datos.obtenerDatosGrafica("lenguaje",7,this.barChartLabelsLenguaje5).subscribe(
-    //this._datos.obtenerLenguajes5().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1548,81 +943,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len5 = data;
-        this.barChartDataHerramienta = [
-          {
-            data: [
-              parseInt(this.len5.Joomla.Certificado.total),
-              parseInt(this.len5.Sharepoint.Certificado.total),
-              parseInt(this.len5.Hybernate.Certificado.total),
-              parseInt(this.len5.Angular.Certificado.total),
-              parseInt(this.len5.Ember.Certificado.total),
-              parseInt(this.len5.JSON.Certificado.total),
-              parseInt(this.len5.IONIC.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len5.Joomla.Curso.total),
-              parseInt(this.len5.Sharepoint.Curso.total),
-              parseInt(this.len5.Hybernate.Curso.total),
-              parseInt(this.len5.Angular.Curso.total),
-              parseInt(this.len5.Ember.Curso.total),
-              parseInt(this.len5.JSON.Curso.total),
-              parseInt(this.len5.IONIC.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len5.Joomla.Avanzado.total),
-              parseInt(this.len5.Sharepoint.Avanzado.total),
-              parseInt(this.len5.Hybernate.Avanzado.total),
-              parseInt(this.len5.Angular.Avanzado.total),
-              parseInt(this.len5.Ember.Avanzado.total),
-              parseInt(this.len5.JSON.Avanzado.total),
-              parseInt(this.len5.IONIC.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len5.Joomla.Intermedio.total),
-              parseInt(this.len5.Sharepoint.Intermedio.total),
-              parseInt(this.len5.Hybernate.Intermedio.total),
-              parseInt(this.len5.Angular.Intermedio.total),
-              parseInt(this.len5.Ember.Intermedio.total),
-              parseInt(this.len5.JSON.Intermedio.total),
-              parseInt(this.len5.IONIC.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len5.Joomla.Basico.total),
-              parseInt(this.len5.Sharepoint.Basico.total),
-              parseInt(this.len5.Hybernate.Basico.total),
-              parseInt(this.len5.Angular.Basico.total),
-              parseInt(this.len5.Ember.Basico.total),
-              parseInt(this.len5.JSON.Basico.total),
-              parseInt(this.len5.IONIC.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len5.Joomla.Nocion.total),
-              parseInt(this.len5.Sharepoint.Nocion.total),
-              parseInt(this.len5.Hybernate.Nocion.total),
-              parseInt(this.len5.Angular.Nocion.total),
-              parseInt(this.len5.Ember.Nocion.total),
-              parseInt(this.len5.JSON.Nocion.total),
-              parseInt(this.len5.IONIC.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len5.Joomla.Ninguno.total),
-              parseInt(this.len5.Sharepoint.Ninguno.total),
-              parseInt(this.len5.Hybernate.Ninguno.total),
-              parseInt(this.len5.Angular.Ninguno.total),
-              parseInt(this.len5.Ember.Ninguno.total),
-              parseInt(this.len5.JSON.Ninguno.total),
-              parseInt(this.len5.IONIC.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje5.length; y++){
+            let label = this.barChartLabelsLenguaje5[y].split(" ").join("_");
+            numeros[y] = parseInt(this.len5[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1633,7 +968,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerLenguajes6(){
     this._datos.obtenerDatosGrafica("lenguaje",3,this.barChartLabelsLenguaje6).subscribe(
-    //this._datos.obtenerLenguajes6().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1654,53 +988,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.len6 = data;
-        this.barChartDataHerramienta6 = [
-          {
-            data: [
-              parseInt(this.len6.SPRING.Certificado.total),
-              parseInt(this.len6.Google_AD_Words.Certificado.total),
-              parseInt(this.len6.Google_Analitics.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.len6.SPRING.Curso.total),
-              parseInt(this.len6.Google_AD_Words.Curso.total),
-              parseInt(this.len6.Google_Analitics.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.len6.SPRING.Avanzado.total),
-              parseInt(this.len6.Google_AD_Words.Avanzado.total),
-              parseInt(this.len6.Google_Analitics.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.len6.SPRING.Intermedio.total),
-              parseInt(this.len6.Google_AD_Words.Intermedio.total),
-              parseInt(this.len6.Google_Analitics.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.len6.SPRING.Basico.total),
-              parseInt(this.len6.Google_AD_Words.Basico.total),
-              parseInt(this.len6.Google_Analitics.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.len6.SPRING.Nocion.total),
-              parseInt(this.len6.Google_AD_Words.Nocion.total),
-              parseInt(this.len6.Google_Analitics.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.len6.SPRING.Ninguno.total),
-              parseInt(this.len6.Google_AD_Words.Ninguno.total),
-              parseInt(this.len6.Google_Analitics.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsLenguaje6.length; y++){
+            let label = this.barChartLabelsLenguaje6[y].split(" ").join("_");
+            numeros[y] = parseInt(this.len6[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1711,7 +1013,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerSoluciones(){
     this._datos.obtenerDatosGrafica("solucion",2,this.barChartLabelsSolucion).subscribe(
-    //this._datos.obtenerSoluciones().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1732,46 +1033,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.sol = data;
-        this.barChartDataSolucion = [
-          {
-            data: [
-              parseInt(this.sol.Amazon.Certificado.total),
-              parseInt(this.sol.Azure.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.sol.Amazon.Curso.total),
-              parseInt(this.sol.Azure.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.sol.Amazon.Avanzado.total),
-              parseInt(this.sol.Azure.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.sol.Amazon.Intermedio.total),
-              parseInt(this.sol.Azure.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.sol.Amazon.Basico.total),
-              parseInt(this.sol.Azure.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.sol.Amazon.Nocion.total),
-              parseInt(this.sol.Azure.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.sol.Amazon.Ninguno.total),
-              parseInt(this.sol.Azure.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsSolucion.length; y++){
+            let label = this.barChartLabelsSolucion[y].split(" ").join("_");
+            numeros[y] = parseInt(this.sol[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1782,7 +1058,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerCertificaciones1(){
     this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion1).subscribe(
-    //this._datos.obtenerCertificaciones1().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1803,81 +1078,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.cer1 = data;
-        this.barChartDataCertificacion1 = [
-          {
-            data: [
-              parseInt(this.cer1.Scrum_Master.Certificado.total),
-              parseInt(this.cer1.Scrum_Team_Member.Certificado.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Certificado.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Certificado.total),
-              parseInt(this.cer1.ITIL_Intermedio.Certificado.total),
-              parseInt(this.cer1.ITIL_Expert.Certificado.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.cer1.Scrum_Master.Curso.total),
-              parseInt(this.cer1.Scrum_Team_Member.Curso.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Curso.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Curso.total),
-              parseInt(this.cer1.ITIL_Intermedio.Curso.total),
-              parseInt(this.cer1.ITIL_Expert.Curso.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.cer1.Scrum_Master.Avanzado.total),
-              parseInt(this.cer1.Scrum_Team_Member.Avanzado.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Avanzado.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Avanzado.total),
-              parseInt(this.cer1.ITIL_Intermedio.Avanzado.total),
-              parseInt(this.cer1.ITIL_Expert.Avanzado.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.cer1.Scrum_Master.Intermedio.total),
-              parseInt(this.cer1.Scrum_Team_Member.Intermedio.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Intermedio.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Intermedio.total),
-              parseInt(this.cer1.ITIL_Intermedio.Intermedio.total),
-              parseInt(this.cer1.ITIL_Expert.Intermedio.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.cer1.Scrum_Master.Basico.total),
-              parseInt(this.cer1.Scrum_Team_Member.Basico.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Basico.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Basico.total),
-              parseInt(this.cer1.ITIL_Intermedio.Basico.total),
-              parseInt(this.cer1.ITIL_Expert.Basico.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.cer1.Scrum_Master.Nocion.total),
-              parseInt(this.cer1.Scrum_Team_Member.Nocion.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Nocion.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Nocion.total),
-              parseInt(this.cer1.ITIL_Intermedio.Nocion.total),
-              parseInt(this.cer1.ITIL_Expert.Nocion.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.cer1.Scrum_Master.Ninguno.total),
-              parseInt(this.cer1.Scrum_Team_Member.Ninguno.total),
-              parseInt(this.cer1.Scrum_Product_Owner.Ninguno.total),
-              parseInt(this.cer1.ITIL_Fundamentos.Ninguno.total),
-              parseInt(this.cer1.ITIL_Intermedio.Ninguno.total),
-              parseInt(this.cer1.ITIL_Expert.Ninguno.total),
-              parseInt(this.cer1.Six_Sigma_Black_Belt.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsCertificacion1.length; y++){
+            let label = this.barChartLabelsCertificacion1[y].split(" ").join("_");
+            numeros[y] = parseInt(this.cer1[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1888,7 +1103,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerCertificaciones2(){
     this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion2).subscribe(
-    //this._datos.obtenerCertificaciones2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -1909,81 +1123,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.cer2 = data;
-        this.barChartDataCertificacion1 = [
-          {
-            data: [
-              parseInt(this.cer2.PMP.Certificado.total),
-              parseInt(this.cer2.ISTQB.Certificado.total),
-              parseInt(this.cer2.CMMI_Oficial.Certificado.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Certificado.total),
-              parseInt(this.cer2.ISO_27000.Certificado.total),
-              parseInt(this.cer2.ISO_20000.Certificado.total),
-              parseInt(this.cer2.COBIT.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.cer2.PMP.Curso.total),
-              parseInt(this.cer2.ISTQB.Curso.total),
-              parseInt(this.cer2.CMMI_Oficial.Curso.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Curso.total),
-              parseInt(this.cer2.ISO_27000.Curso.total),
-              parseInt(this.cer2.ISO_20000.Curso.total),
-              parseInt(this.cer2.COBIT.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.cer2.PMP.Avanzado.total),
-              parseInt(this.cer2.ISTQB.Avanzado.total),
-              parseInt(this.cer2.CMMI_Oficial.Avanzado.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Avanzado.total),
-              parseInt(this.cer2.ISO_27000.Avanzado.total),
-              parseInt(this.cer2.ISO_20000.Avanzado.total),
-              parseInt(this.cer2.COBIT.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.cer2.PMP.Intermedio.total),
-              parseInt(this.cer2.ISTQB.Intermedio.total),
-              parseInt(this.cer2.CMMI_Oficial.Intermedio.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Intermedio.total),
-              parseInt(this.cer2.ISO_27000.Intermedio.total),
-              parseInt(this.cer2.ISO_20000.Intermedio.total),
-              parseInt(this.cer2.COBIT.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.cer2.PMP.Basico.total),
-              parseInt(this.cer2.ISTQB.Basico.total),
-              parseInt(this.cer2.CMMI_Oficial.Basico.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Basico.total),
-              parseInt(this.cer2.ISO_27000.Basico.total),
-              parseInt(this.cer2.ISO_20000.Basico.total),
-              parseInt(this.cer2.COBIT.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.cer2.PMP.Nocion.total),
-              parseInt(this.cer2.ISTQB.Nocion.total),
-              parseInt(this.cer2.CMMI_Oficial.Nocion.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Nocion.total),
-              parseInt(this.cer2.ISO_27000.Nocion.total),
-              parseInt(this.cer2.ISO_20000.Nocion.total),
-              parseInt(this.cer2.COBIT.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.cer2.PMP.Ninguno.total),
-              parseInt(this.cer2.ISTQB.Ninguno.total),
-              parseInt(this.cer2.CMMI_Oficial.Ninguno.total),
-              parseInt(this.cer2.Oracle_Certified_Profesional_Java_SE.Ninguno.total),
-              parseInt(this.cer2.ISO_27000.Ninguno.total),
-              parseInt(this.cer2.ISO_20000.Ninguno.total),
-              parseInt(this.cer2.COBIT.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsCertificacion2.length; y++){
+            let label = this.barChartLabelsCertificacion2[y].split(" ").join("_");
+            numeros[y] = parseInt(this.cer2[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -1994,7 +1148,6 @@ export class ReportesComponent implements OnInit {
 
   obtenerCertificaciones3(){
     this._datos.obtenerDatosGrafica("certificacion",7,this.barChartLabelsCertificacion3).subscribe(
-    //this._datos.obtenerCertificaciones2().subscribe(
       data => {
         this.idioma = false;
         this.herramienta1 = false;
@@ -2015,81 +1168,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.cer3 = data;
-        this.barChartDataCertificacion1 = [
-          {
-            data: [
-              parseInt(this.cer3.CRISC.Certificado.total),
-              parseInt(this.cer3.GRCP.Certificado.total),
-              parseInt(this.cer3.ISO_9000.Certificado.total),
-              parseInt(this.cer3.Prince.Certificado.total),
-              parseInt(this.cer3.COSO.Certificado.total),
-              parseInt(this.cer3.SOX.Certificado.total),
-              parseInt(this.cer3.BPM.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.cer3.CRISC.Curso.total),
-              parseInt(this.cer3.GRCP.Curso.total),
-              parseInt(this.cer3.ISO_9000.Curso.total),
-              parseInt(this.cer3.Prince.Curso.total),
-              parseInt(this.cer3.COSO.Curso.total),
-              parseInt(this.cer3.SOX.Curso.total),
-              parseInt(this.cer3.BPM.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.cer3.CRISC.Avanzado.total),
-              parseInt(this.cer3.GRCP.Avanzado.total),
-              parseInt(this.cer3.ISO_9000.Avanzado.total),
-              parseInt(this.cer3.Prince.Avanzado.total),
-              parseInt(this.cer3.COSO.Avanzado.total),
-              parseInt(this.cer3.SOX.Avanzado.total),
-              parseInt(this.cer3.BPM.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.cer3.CRISC.Intermedio.total),
-              parseInt(this.cer3.GRCP.Intermedio.total),
-              parseInt(this.cer3.ISO_9000.Intermedio.total),
-              parseInt(this.cer3.Prince.Intermedio.total),
-              parseInt(this.cer3.COSO.Intermedio.total),
-              parseInt(this.cer3.SOX.Intermedio.total),
-              parseInt(this.cer3.BPM.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.cer3.CRISC.Basico.total),
-              parseInt(this.cer3.GRCP.Basico.total),
-              parseInt(this.cer3.ISO_9000.Basico.total),
-              parseInt(this.cer3.Prince.Basico.total),
-              parseInt(this.cer3.COSO.Basico.total),
-              parseInt(this.cer3.SOX.Basico.total),
-              parseInt(this.cer3.BPM.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.cer3.CRISC.Nocion.total),
-              parseInt(this.cer3.GRCP.Nocion.total),
-              parseInt(this.cer3.ISO_9000.Nocion.total),
-              parseInt(this.cer3.Prince.Nocion.total),
-              parseInt(this.cer3.COSO.Nocion.total),
-              parseInt(this.cer3.SOX.Nocion.total),
-              parseInt(this.cer3.BPM.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.cer3.CRISC.Ninguno.total),
-              parseInt(this.cer3.GRCP.Ninguno.total),
-              parseInt(this.cer3.ISO_9000.Ninguno.total),
-              parseInt(this.cer3.Prince.Ninguno.total),
-              parseInt(this.cer3.COSO.Ninguno.total),
-              parseInt(this.cer3.SOX.Ninguno.total),
-              parseInt(this.cer3.BPM.Ninguno.total)
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsCertificacion3.length; y++){
+            let label = this.barChartLabelsCertificacion3[y].split(" ").join("_");
+            numeros[y] = parseInt(this.cer3[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -2100,9 +1193,7 @@ export class ReportesComponent implements OnInit {
 
   obtenerMetodologias1(){
     this._datos.obtenerDatosGrafica("metodologia",7,this.barChartLabelsMetodologia1).subscribe(
-    //this._datos.obtenerMetodologias1().subscribe(
       data => {
-        //console.log(data);
         this.idioma = false;
         this.herramienta1 = false;
         this.herramienta2 = false;
@@ -2122,81 +1213,21 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = true;
         this.metodologia2 = false;
         this.met1 = data;
-        this.barChartDataCertificacion1 = [
-          {
-            data: [
-              parseInt(this.met1.ISTQB.Certificado.total),
-              parseInt(this.met1.Agile_Testing.Certificado.total),
-              parseInt(this.met1.ISEB.Certificado.total),
-              parseInt(this.met1.CAST.Certificado.total),
-              parseInt(this.met1.CSTE.Certificado.total),
-              parseInt(this.met1.CSQA.Certificado.total),
-              parseInt(this.met1.TMap.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.met1.ISTQB.Curso.total),
-              parseInt(this.met1.Agile_Testing.Curso.total),
-              parseInt(this.met1.ISEB.Curso.total),
-              parseInt(this.met1.CAST.Curso.total),
-              parseInt(this.met1.CSTE.Curso.total),
-              parseInt(this.met1.CSQA.Curso.total),
-              parseInt(this.met1.TMap.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.met1.ISTQB.Avanzado.total),
-              parseInt(this.met1.Agile_Testing.Avanzado.total),
-              parseInt(this.met1.ISEB.Avanzado.total),
-              parseInt(this.met1.CAST.Avanzado.total),
-              parseInt(this.met1.CSTE.Avanzado.total),
-              parseInt(this.met1.CSQA.Avanzado.total),
-              parseInt(this.met1.TMap.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.met1.ISTQB.Intermedio.total),
-              parseInt(this.met1.Agile_Testing.Intermedio.total),
-              parseInt(this.met1.ISEB.Intermedio.total),
-              parseInt(this.met1.CAST.Intermedio.total),
-              parseInt(this.met1.CSTE.Intermedio.total),
-              parseInt(this.met1.CSQA.Intermedio.total),
-              parseInt(this.met1.TMap.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.met1.ISTQB.Basico.total),
-              parseInt(this.met1.Agile_Testing.Basico.total),
-              parseInt(this.met1.ISEB.Basico.total),
-              parseInt(this.met1.CAST.Basico.total),
-              parseInt(this.met1.CSTE.Basico.total),
-              parseInt(this.met1.CSQA.Basico.total),
-              parseInt(this.met1.TMap.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.met1.ISTQB.Nocion.total),
-              parseInt(this.met1.Agile_Testing.Nocion.total),
-              parseInt(this.met1.ISEB.Nocion.total),
-              parseInt(this.met1.CAST.Nocion.total),
-              parseInt(this.met1.CSTE.Nocion.total),
-              parseInt(this.met1.CSQA.Nocion.total),
-              parseInt(this.met1.TMap.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.met1.ISTQB.Ninguno.total),
-              parseInt(this.met1.Agile_Testing.Ninguno.total),
-              parseInt(this.met1.ISEB.Ninguno.total),
-              parseInt(this.met1.CAST.Ninguno.total),
-              parseInt(this.met1.CSTE.Ninguno.total),
-              parseInt(this.met1.CSQA.Ninguno.total),
-              parseInt(this.met1.TMap.Ninguno.total)
-            ],label: 'Ninguno'
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsMetodologia1.length; y++){
+            let label = this.barChartLabelsMetodologia1[y].split(" ").join("_");
+            numeros[y] = parseInt(this.met1[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -2207,9 +1238,7 @@ export class ReportesComponent implements OnInit {
 
   obtenerMetodologias2(){
     this._datos.obtenerDatosGrafica("metodologia",5,this.barChartLabelsMetodologia2).subscribe(
-    //this._datos.obtenerMetodologias2().subscribe(
       data => {
-        //console.log(data);
         this.idioma = false;
         this.herramienta1 = false;
         this.herramienta2 = false;
@@ -2229,68 +1258,22 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = true;
         this.met2 = data;
-        this.barChartDataMetodologia = [
-          {
-            data: [
-              parseInt(this.met2.TMMi.Certificado.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Certificado.total),
-              parseInt(this.met2.SCENT.Certificado.total),
-              parseInt(this.met2.AGEDIS.Certificado.total),
-              parseInt(this.met2.ITIL_QA.Certificado.total)
-            ],label: 'Certificado'
-          },
-          {
-            data: [
-              parseInt(this.met2.TMMi.Curso.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Curso.total),
-              parseInt(this.met2.SCENT.Curso.total),
-              parseInt(this.met2.AGEDIS.Curso.total),
-              parseInt(this.met2.ITIL_QA.Curso.total)
-            ],label: 'Curso oficial sin certificacion'
-          },
-          {
-            data: [
-              parseInt(this.met2.TMMi.Avanzado.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Avanzado.total),
-              parseInt(this.met2.SCENT.Avanzado.total),
-              parseInt(this.met2.AGEDIS.Avanzado.total),
-              parseInt(this.met2.ITIL_QA.Avanzado.total)
-            ],label: 'Avanzado'
-          },{
-            data: [
-              parseInt(this.met2.TMMi.Intermedio.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Intermedio.total),
-              parseInt(this.met2.SCENT.Intermedio.total),
-              parseInt(this.met2.AGEDIS.Intermedio.total),
-              parseInt(this.met2.ITIL_QA.Intermedio.total)
-            ],label: 'Intermedio'
-          },{
-            data: [
-              parseInt(this.met2.TMMi.Basico.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Basico.total),
-              parseInt(this.met2.SCENT.Basico.total),
-              parseInt(this.met2.AGEDIS.Basico.total),
-              parseInt(this.met2.ITIL_QA.Basico.total)
-            ],label: 'Basico'
-          },{
-            data: [
-              parseInt(this.met2.TMMi.Nocion.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Nocion.total),
-              parseInt(this.met2.SCENT.Nocion.total),
-              parseInt(this.met2.AGEDIS.Nocion.total),
-              parseInt(this.met2.ITIL_QA.Nocion.total)
-            ],label: 'Nocion'
-          },{
-            data: [
-              parseInt(this.met2.TMMi.Ninguno.total),
-              parseInt(this.met2.CMMI_PPQA_VER_VAL.Ninguno.total),
-              parseInt(this.met2.SCENT.Ninguno.total),
-              parseInt(this.met2.AGEDIS.Ninguno.total),
-              parseInt(this.met2.ITIL_QA.Ninguno.total)
-              
-            ],label: 'Ninguno'
+        
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+        
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsMetodologia2.length; y++){
+            let label = this.barChartLabelsMetodologia2[y].split(" ").join("_");
+            if(label == "CMMI_PPQA:VER&VAL"){ label = "CMMI_PPQA_VER_VAL"; }
+            numeros[y] = parseInt(this.met2[label][this.nivel_label[x]].total);
           }
-        ];
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
       },
       error => {
         console.log(error);
@@ -2335,123 +1318,32 @@ export class ReportesComponent implements OnInit {
     this.seleccionado = false;
   }
 
-  verHerramientas1(){
+  verGrafica(id){
     this.quitarGraficas();
     this.descativarOpcionesMenu();
-    $("#h1").addClass("list-group-item-info");
-    this.obtenerHerramientas1();
-  }
+    $(id).addClass("list-group-item-info");
 
-  verHerramientas2(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#h2").addClass("list-group-item-info");
-    this.obtenerHerramientas2();
-  }
+    if(id == "#h1"){ this.obtenerHerramientas1(); }
+    if(id == "#h2"){ this.obtenerHerramientas2(); }
+    if(id == "#h3"){ this.obtenerHerramientas3(); }
+    if(id == "#h4"){ this.obtenerHerramientas4(); }
+    if(id == "#h5"){ this.obtenerHerramientas5(); }
 
-  verHerramientas3(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#h3").addClass("list-group-item-info");
-    this.obtenerHerramientas3();
-  }
+    if(id == "#l1"){ this.obtenerLenguajes1(); }
+    if(id == "#l2"){ this.obtenerLenguajes2(); }
+    if(id == "#l3"){ this.obtenerLenguajes3(); }
+    if(id == "#l4"){ this.obtenerLenguajes4(); }
+    if(id == "#l5"){ this.obtenerLenguajes5(); }
+    if(id == "#l6"){ this.obtenerLenguajes6(); }
 
-  verHerramientas4(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#h4").addClass("list-group-item-info");
-    this.obtenerHerramientas4();
-  }
+    if(id == "#s"){ this.obtenerSoluciones(); }
 
-  verHerramientas5(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#h5").addClass("list-group-item-info");
-    this.obtenerHerramientas5();
-  }
+    if(id == "#c1"){ this.obtenerCertificaciones1(); }
+    if(id == "#c2"){ this.obtenerCertificaciones2(); }
+    if(id == "#c3"){ this.obtenerCertificaciones3(); }
 
-  verLenguajes1(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l1").addClass("list-group-item-info");
-    this.obtenerLenguajes1();
-  }
-
-  verLenguajes2(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l2").addClass("list-group-item-info");
-    this.obtenerLenguajes2();
-  }
-
-  verLenguajes3(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l3").addClass("list-group-item-info");
-    this.obtenerLenguajes3();
-  }
-
-  verLenguajes4(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l4").addClass("list-group-item-info");
-    this.obtenerLenguajes4();
-  }
-
-  verLenguajes5(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l5").addClass("list-group-item-info");
-    this.obtenerLenguajes5();
-  }
-
-  verLenguajes6(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#l6").addClass("list-group-item-info");
-    this.obtenerLenguajes6();
-  }
-
-  verSoluciones(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#s").addClass("list-group-item-info");
-    this.obtenerSoluciones();
-  }
-
-  verCertificaciones1(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#c1").addClass("list-group-item-info");
-    this.obtenerCertificaciones1();
-  }
-
-  verCertificaciones2(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#c2").addClass("list-group-item-info");
-    this.obtenerCertificaciones2();
-  }
-
-  verCertificaciones3(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#c3").addClass("list-group-item-info");
-    this.obtenerCertificaciones3();
-  }
-
-  verMetodologias1(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#m1").addClass("list-group-item-info");
-    this.obtenerMetodologias1();
-  }
-
-  verMetodologias2(){
-    this.quitarGraficas();
-    this.descativarOpcionesMenu();
-    $("#m2").addClass("list-group-item-info");
-    this.obtenerMetodologias2();
+    if(id == "#m1"){ this.obtenerMetodologias1(); }
+    if(id == "#m2"){ this.obtenerMetodologias1(); }
   }
 
 }

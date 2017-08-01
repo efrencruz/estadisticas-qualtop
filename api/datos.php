@@ -81,7 +81,8 @@
     if($tipo == "solucion"){ $tipo_tmp = "Soluciones_en_la_nube_"; }
     if($tipo == "certificacion"){ 
       $tipo_tmp = ""; 
-      $nivel[1] = "Con curso oficial sin certificacion";
+      //$nivel[1] = "Con curso oficial sin certificacion";
+      //$nivel[0] = "Certificacion";
     }
     if($tipo == "metodologia"){ $tipo_tmp = "Metodologias_"; }
     
@@ -129,20 +130,11 @@
     while($reg = mysqli_fetch_assoc($res)){
         $data['Avanzado'][] = $reg;
     }
-    if($dato == "Soluciones_en_la_nube_Amazon" || $dato == "Soluciones_en_la_nube_Azure"){
-      $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Con curso oficial sin certificacion'";
-      $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
-      while($reg = mysqli_fetch_assoc($res)){
-          $data['Curso'][] = $reg;
-      }
-    } else {
-      $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Con curso oficial sin certificacion'";
-      $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
-      while($reg = mysqli_fetch_assoc($res)){
-          $data['Curso'][] = $reg;
-      }
+    $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Curso oficial sin certificacion'";
+    $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
+    while($reg = mysqli_fetch_assoc($res)){
+        $data['Curso'][] = $reg;
     }
-    
     $sql = "SELECT Nombre, Cargo_actual FROM Datos WHERE ".$dato." = 'Certificado'";
     $res = mysqli_query($conexion, $sql) or die("ERROR: " + mysqli_error($conexion));
     while($reg = mysqli_fetch_assoc($res)){
