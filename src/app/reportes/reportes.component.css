@@ -15,8 +15,31 @@
 
 .lista {
   width: 220px;
-  height: 592px;
+  height: 522px;
+  overflow: hidden;
   overflow-y: auto;
+}
+
+/* .h{
+  background-color: #f6bdb1;
+}
+.l{
+  background-color: #f6f5b1;
+}
+.c{
+  background-color: #c8f6b1;
+}
+.m{
+  background-color: #edb1f6;
+}
+.s{
+  background-color: #fff932;
+} */
+
+.lista a {
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 table {
@@ -35,12 +58,12 @@ tr:after {
 }
 
 thead th {
-  height: 40px;
+  height: 35px;
   /*text-align: left;*/
 }
 
 tbody {
-  height: 320px;
+  height: 235px;
   overflow-y: auto;
 }
 

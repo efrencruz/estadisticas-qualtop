@@ -1,41 +1,45 @@
 <div>
   <div class="col-md-2 menu">
+
+    <h4>Filtro</h4>
+    <input type="text" class="form-control">
+
     <h4>Lista de categorías</h4>
     <div class="list-group lista">
       <!-- <a href="#" class="list-group-item" (click)="verIdiomas()">Idiomas</a> -->
-      <a id="h1" href="#" class="list-group-item" (click)="verGrafica('#h1')">1 Herramientas de trabajo</a>
-      <a id="h2" href="#" class="list-group-item" (click)="verGrafica('#h2')">2 Herramientas de trabajo</a>
-      <a id="h3" href="#" class="list-group-item" (click)="verGrafica('#h3')">3 Herramientas de trabajo</a>
-      <a id="h4" href="#" class="list-group-item" (click)="verGrafica('#h4')">4 Herramientas de trabajo</a>
-      <a id="h5" href="#" class="list-group-item" (click)="verGrafica('#h5')">5 Herramientas de trabajo</a>
-      <a id="l1" href="#" class="list-group-item" (click)="verGrafica('#l1')">1 Leng. de programación</a>
-      <a id="l2" href="#" class="list-group-item" (click)="verGrafica('#l2')">2 Leng. de programación</a>
-      <a id="l3" href="#" class="list-group-item" (click)="verGrafica('#l3')">3 Leng. de programación</a>
-      <a id="l4" href="#" class="list-group-item" (click)="verGrafica('#l4')">4 Leng. de programación</a>
-      <a id="l5" href="#" class="list-group-item" (click)="verGrafica('#l5')">5 Leng. de programación</a>
-      <a id="l6" href="#" class="list-group-item" (click)="verGrafica('#l6')">6 Leng. de programación</a>
-      <a id="s" href="#" class="list-group-item" (click)="verGrafica('#s')">Soluciones en la nube</a>
-      <a id="c1" href="#" class="list-group-item" (click)="verGrafica('#c1')">1 Certificaciones</a>
-      <a id="c2" href="#" class="list-group-item" (click)="verGrafica('#c2')">2 Certificaciones</a>
-      <a id="c3" href="#" class="list-group-item" (click)="verGrafica('#c3')">3 Certificaciones</a>
-      <a id="m1" href="#" class="list-group-item" (click)="verGrafica('#m1')">1 Metodologías</a>
-      <a id="m2" href="#" class="list-group-item" (click)="verGrafica('#m2')">2 Metodologías</a>
-      <a id="h6" href="#" class="list-group-item" (click)="verGrafica('#h6')">6 Herramientas de trabajo</a>
-      <a id="h7" href="#" class="list-group-item" (click)="verGrafica('#h7')">7 Herramientas de trabajo</a>
-      <a id="h8" href="#" class="list-group-item" (click)="verGrafica('#h8')">8 Herramientas de trabajo</a>
-      <a id="h9" href="#" class="list-group-item" (click)="verGrafica('#h9')">9 Herramientas de trabajo</a>
-      <a id="h10" href="#" class="list-group-item" (click)="verGrafica('#h10')">10 Herramientas de trabajo</a>
-      <a id="h11" href="#" class="list-group-item" (click)="verGrafica('#h11')">11 Herramientas de trabajo</a>
-      <a id="h12" href="#" class="list-group-item" (click)="verGrafica('#h12')">12 Herramientas de trabajo</a>
-      <a id="h13" href="#" class="list-group-item" (click)="verGrafica('#h13')">13 Herramientas de trabajo</a>
-      <a id="h14" href="#" class="list-group-item" (click)="verGrafica('#h14')">14 Herramientas de trabajo</a>
+      <a id="h1" href="#" class="list-group-item h" (click)="verGrafica('#h1')">1. Herramientas de trabajo</a>
+      <a id="h2" href="#" class="list-group-item h" (click)="verGrafica('#h2')">2. Herramientas de trabajo</a>
+      <a id="h3" href="#" class="list-group-item h" (click)="verGrafica('#h3')">3. Herramientas de trabajo</a>
+      <a id="h4" href="#" class="list-group-item h" (click)="verGrafica('#h4')">4. Herramientas de trabajo</a>
+      <a id="h5" href="#" class="list-group-item h" (click)="verGrafica('#h5')">5. Herramientas de trabajo</a>
+      <a id="l1" href="#" class="list-group-item l" (click)="verGrafica('#l1')">1. Leng. de programación</a>
+      <a id="l2" href="#" class="list-group-item l" (click)="verGrafica('#l2')">2. Leng. de programación</a>
+      <a id="l3" href="#" class="list-group-item l" (click)="verGrafica('#l3')">3. Leng. de programación</a>
+      <a id="l4" href="#" class="list-group-item l" (click)="verGrafica('#l4')">4. Leng. de programación</a>
+      <a id="l5" href="#" class="list-group-item l" (click)="verGrafica('#l5')">5. Leng. de programación</a>
+      <a id="l6" href="#" class="list-group-item l" (click)="verGrafica('#l6')">6. Leng. de programación</a>
+      <a id="s" href="#" class="list-group-item s" (click)="verGrafica('#s')">Soluciones en la nube</a>
+      <a id="c1" href="#" class="list-group-item c" (click)="verGrafica('#c1')">1. Certificaciones</a>
+      <a id="c2" href="#" class="list-group-item c" (click)="verGrafica('#c2')">2. Certificaciones</a>
+      <a id="c3" href="#" class="list-group-item c" (click)="verGrafica('#c3')">3. Certificaciones</a>
+      <a id="m1" href="#" class="list-group-item m" (click)="verGrafica('#m1')">1. Metodologías</a>
+      <a id="m2" href="#" class="list-group-item m" (click)="verGrafica('#m2')">2. Metodologías</a>
+      <a id="h6" href="#" class="list-group-item h" (click)="verGrafica('#h6')">6. Herramientas de trabajo</a>
+      <a id="h7" href="#" class="list-group-item h" (click)="verGrafica('#h7')">7. Herramientas de trabajo</a>
+      <a id="h8" href="#" class="list-group-item h" (click)="verGrafica('#h8')">8. Herramientas de trabajo</a>
+      <a id="h9" href="#" class="list-group-item h" (click)="verGrafica('#h9')">9. Herramientas de trabajo</a>
+      <a id="h10" href="#" class="list-group-item h" (click)="verGrafica('#h10')">10. Herramientas de trabajo</a>
+      <a id="h11" href="#" class="list-group-item h" (click)="verGrafica('#h11')">11. Herramientas de trabajo</a>
+      <a id="h12" href="#" class="list-group-item h" (click)="verGrafica('#h12')">12. Herramientas de trabajo</a>
+      <a id="h13" href="#" class="list-group-item h" (click)="verGrafica('#h13')">13. Herramientas de trabajo</a>
+      <a id="h14" href="#" class="list-group-item h" (click)="verGrafica('#h14')">14. Herramientas de trabajo</a>
     </div>
   </div>
 
   <div class="col-md-10">
 
     <div [hidden]="!metodologia1">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsMetodologia1"
               [options]="barChartOptions"
@@ -44,7 +48,7 @@
     </div>
 
     <div [hidden]="!metodologia2">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsMetodologia2"
               [options]="barChartOptions"
@@ -53,7 +57,7 @@
     </div>
 
     <div [hidden]="!certificacion1">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsCertificacion1"
               [options]="barChartOptions"
@@ -62,7 +66,7 @@
     </div>
 
     <div [hidden]="!certificacion2">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsCertificacion2"
               [options]="barChartOptions"
@@ -71,7 +75,7 @@
     </div>
 
     <div [hidden]="!certificacion3">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsCertificacion3"
               [options]="barChartOptions"
@@ -80,7 +84,7 @@
     </div>
 
     <div [hidden]="!idioma">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartDataIdioma"
               [labels]="barChartLabelsIdioma"
               [options]="barChartOptions"
@@ -89,7 +93,7 @@
     </div>
 
     <div [hidden]="!solucion">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsSolucion"
               [options]="barChartOptions"
@@ -98,7 +102,7 @@
     </div>
 
     <div [hidden]="!lenguaje1">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje1"
               [options]="barChartOptions"
@@ -107,7 +111,7 @@
     </div>
 
     <div [hidden]="!lenguaje2">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje2"
               [options]="barChartOptions"
@@ -116,7 +120,7 @@
     </div>
 
     <div [hidden]="!lenguaje3">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje3"
               [options]="barChartOptions"
@@ -125,7 +129,7 @@
     </div>
 
     <div [hidden]="!lenguaje4">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje4"
               [options]="barChartOptions"
@@ -134,7 +138,7 @@
     </div>
 
     <div [hidden]="!lenguaje5">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje5"
               [options]="barChartOptions"
@@ -143,7 +147,7 @@
     </div>
 
     <div [hidden]="!lenguaje6">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsLenguaje6"
               [options]="barChartOptions"
@@ -153,7 +157,7 @@
     </div>
 
     <div [hidden]="!herramienta1">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta"
               [options]="barChartOptions"
@@ -162,7 +166,7 @@
     </div>
 
     <div [hidden]="!herramienta2">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta2"
               [options]="barChartOptions"
@@ -171,7 +175,7 @@
     </div>
 
     <div [hidden]="!herramienta3">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta3"
               [options]="barChartOptions"
@@ -180,7 +184,7 @@
     </div>
 
     <div [hidden]="!herramienta4">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta4"
               [options]="barChartOptions"
@@ -189,7 +193,7 @@
     </div>
 
     <div [hidden]="!herramienta5">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta5"
               [options]="barChartOptions"
@@ -198,7 +202,7 @@
     </div>
 
     <div [hidden]="!herramienta6">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta6"
               [options]="barChartOptions"
@@ -207,7 +211,7 @@
     </div>
 
     <div [hidden]="!herramienta7">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta7"
               [options]="barChartOptions"
@@ -216,7 +220,7 @@
     </div>
 
     <div [hidden]="!herramienta8">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta8"
               [options]="barChartOptions"
@@ -225,7 +229,7 @@
     </div>
 
     <div [hidden]="!herramienta9">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta9"
               [options]="barChartOptions"
@@ -234,7 +238,7 @@
     </div>
 
     <div [hidden]="!herramienta10">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta10"
               [options]="barChartOptions"
@@ -243,7 +247,7 @@
     </div>
 
     <div [hidden]="!herramienta11">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta11"
               [options]="barChartOptions"
@@ -252,7 +256,7 @@
     </div>
 
     <div [hidden]="!herramienta12">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta12"
               [options]="barChartOptions"
@@ -261,7 +265,7 @@
     </div>
 
     <div [hidden]="!herramienta13">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta13"
               [options]="barChartOptions"
@@ -270,7 +274,7 @@
     </div>
 
     <div [hidden]="!herramienta14">
-      <canvas height="90px" baseChart
+      <canvas height="80px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta14"
               [options]="barChartOptions"
@@ -278,9 +282,16 @@
               (chartClick)="verDatosHerramienta($event)"></canvas>
     </div>
 
-    <hr>
     <div *ngIf="seleccionado">
-      <h3 align="center">{{tipo}}</h3>
+      
+      <h4 *ngIf="certificado" align="center">{{tipo+" - Certificado"}}</h4>
+      <h4 *ngIf="curso" align="center">{{tipo+" - Curso sin certificación"}}</h4>
+      <h4 *ngIf="avanzado" align="center">{{tipo+" - Avanzado"}}</h4>
+      <h4 *ngIf="intermedio" align="center">{{tipo+" - Intermedio"}}</h4>
+      <h4 *ngIf="basico" align="center">{{tipo+" - Básico"}}</h4>
+      <h4 *ngIf="nocion" align="center">{{tipo+" - Noción"}}</h4>
+      <h4 *ngIf="ninguno" align="center">{{tipo+" - Ninguno"}}</h4>
+
       <ul class="nav nav-tabs nav-justified">
         <li id="certificadoMenu" (click)="verLista('certificado')" class="active"><a href="#">Certificado</a></li>
         <li id="cursoMenu" (click)="verLista('curso')" class=""><a href="#">Curso sin certificación</a></li>
@@ -295,7 +306,7 @@
     <!--<div *ngIf="cargando" id="cargando" class="loader"></div>-->
 
     <div id="certificado" *ngIf="certificado">
-      <h4 class="text-primary">Certificado</h4>
+      <!--<h4 class="text-primary">Certificado</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Certificado">
         <table class="table table-striped">
           <thead>
@@ -318,7 +329,7 @@
     </div>
 
     <div id="curso" *ngIf="curso">
-      <h4 class="text-primary">Curso sin certificación</h4>
+      <!--<h4 class="text-primary">Curso sin certificación</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Curso">
         <table class="table table-striped">
           <thead>
@@ -341,7 +352,7 @@
     </div>
 
     <div id="avanzado" *ngIf="avanzado">
-      <h4 class="text-primary">Avanzado</h4>
+      <!--<h4 class="text-primary">Avanzado</h4>-->
       <div  class="tab-pane fade in active" *ngIf="personas.Avanzado">
         <table class="table table-striped">
           <thead>
@@ -364,7 +375,7 @@
     </div>
 
     <div id="intermedio" *ngIf="intermedio">
-      <h4 class="text-primary">Intermedio</h4>
+      <!--<h4 class="text-primary">Intermedio</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Intermedio">
         <table class="table table-striped">
           <thead>
@@ -387,7 +398,7 @@
     </div>
 
     <div id="basico" *ngIf="basico">
-      <h4 class="text-primary">Básico</h4>
+      <!--<h4 class="text-primary">Básico</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Basico">
         <table class="table table-striped">
           <thead>
@@ -410,7 +421,7 @@
     </div>
 
     <div id="nocion" *ngIf="nocion">
-      <h4 class="text-primary">Noción</h4>
+      <!--<h4 class="text-primary">Noción</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Nocion">
         <table class="table table-striped">
           <thead>
@@ -433,7 +444,7 @@
     </div>
 
     <div id="ninguno" *ngIf="ninguno">
-      <h4 class="text-primary">Ninguno</h4>
+      <!--<h4 class="text-primary">Ninguno</h4>-->
       <div class="tab-pane fade in active" *ngIf="personas.Ninguno">
         <table class="table table-striped">
           <thead>
