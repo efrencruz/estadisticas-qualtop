@@ -19,9 +19,9 @@
 -- Table structure for table `Datos`
 --
 
-DROP DATABASE reportes;
-CREATE DATABASE reportes;
-USE reportes;
+DROP DATABASE Datos;
+CREATE DATABASE Datos;
+USE Datos;
 
 DROP TABLE IF EXISTS `Datos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
