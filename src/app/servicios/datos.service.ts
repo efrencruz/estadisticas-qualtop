@@ -4,8 +4,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DatosService {
-  url: String = 'http://localhost/reportes-qualtop/api/';
-  //url: String = 'http://104.198.75.167/reportes-qualtop/api/';
+  //url: String = 'http://localhost/reportes-qualtop/api/';
+  url: String = 'http://104.198.75.167/reportes-qualtop/api/';
   
   constructor(private __http: Http){}
 
