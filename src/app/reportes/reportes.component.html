@@ -20,6 +20,15 @@
       <a id="c3" href="#" class="list-group-item" (click)="verGrafica('#c3')">3 Certificaciones</a>
       <a id="m1" href="#" class="list-group-item" (click)="verGrafica('#m1')">1 Metodologías</a>
       <a id="m2" href="#" class="list-group-item" (click)="verGrafica('#m2')">2 Metodologías</a>
+      <a id="h6" href="#" class="list-group-item" (click)="verGrafica('#h6')">6 Herramientas de trabajo</a>
+      <a id="h7" href="#" class="list-group-item" (click)="verGrafica('#h7')">7 Herramientas de trabajo</a>
+      <a id="h8" href="#" class="list-group-item" (click)="verGrafica('#h8')">8 Herramientas de trabajo</a>
+      <a id="h9" href="#" class="list-group-item" (click)="verGrafica('#h9')">9 Herramientas de trabajo</a>
+      <a id="h10" href="#" class="list-group-item" (click)="verGrafica('#h10')">10 Herramientas de trabajo</a>
+      <a id="h11" href="#" class="list-group-item" (click)="verGrafica('#h11')">11 Herramientas de trabajo</a>
+      <a id="h12" href="#" class="list-group-item" (click)="verGrafica('#h12')">12 Herramientas de trabajo</a>
+      <a id="h13" href="#" class="list-group-item" (click)="verGrafica('#h13')">13 Herramientas de trabajo</a>
+      <a id="h14" href="#" class="list-group-item" (click)="verGrafica('#h14')">14 Herramientas de trabajo</a>
     </div>
   </div>
 
@@ -183,6 +192,87 @@
       <canvas height="90px" baseChart
               [datasets]="barChartData"
               [labels]="barChartLabelsHerramienta5"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta6">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta6"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta7">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta7"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta8">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta8"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta9">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta9"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta10">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta10"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta11">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta11"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta12">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta12"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta13">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta13"
+              [options]="barChartOptions"
+              [chartType]="barChartType"
+              (chartClick)="verDatosHerramienta($event)"></canvas>
+    </div>
+
+    <div [hidden]="!herramienta14">
+      <canvas height="90px" baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabelsHerramienta14"
               [options]="barChartOptions"
               [chartType]="barChartType"
               (chartClick)="verDatosHerramienta($event)"></canvas>

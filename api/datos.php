@@ -59,6 +59,7 @@
   }
 
   function obtenerDatosGrafica($tipo, $cantidad, $datos){
+    //print json_encode($datos);
     $conexion = connect();  
     $tipo_tmp = "";
     $datos_cambiados = [];
@@ -75,15 +76,12 @@
       if($datos[$i] == "CMMI PPQA:VER&VAL"){ $datos[$i] = "CMMI_PPQA_VER_VAL"; }
       $datos_cambiados[$i] = str_replace(" ", "_", $datos[$i]);
     }
+    //print json_encode($datos_cambiados);
 
     if($tipo == "herramienta"){ $tipo_tmp = "Herramientas_de_trabajo_"; }
     if($tipo == "lenguaje"){ $tipo_tmp = ""; }
     if($tipo == "solucion"){ $tipo_tmp = "Soluciones_en_la_nube_"; }
-    if($tipo == "certificacion"){ 
-      $tipo_tmp = ""; 
-      //$nivel[1] = "Con curso oficial sin certificacion";
-      //$nivel[0] = "Certificacion";
-    }
+    if($tipo == "certificacion"){ $tipo_tmp = ""; }
     if($tipo == "metodologia"){ $tipo_tmp = "Metodologias_"; }
     
     for($i=0; $i<$cantidad; $i++){
@@ -98,7 +96,7 @@
         $data[ $datos_cambiados[$i] ][ $nivel_label[$j] ] = mysqli_fetch_assoc($res);
       }
     }
-    print json_encode($data);
+    //print json_encode($data);
     return $data;
   }
 
@@ -163,7 +161,7 @@
     $cantidad = $data['cantidad'];
     $datos = $data['datos'];
     $resultado = obtenerDatosGrafica($tipo, $cantidad, $datos);
-    //print json_encode($resultado);
+    print json_encode($resultado);
   }
 
   if($op == 'obtenerIdiomas') { 

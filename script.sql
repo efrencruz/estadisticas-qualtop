@@ -18,7 +18,6 @@
 --
 -- Table structure for table `Datos`
 --
-
 DROP DATABASE Datos;
 CREATE DATABASE Datos;
 USE Datos;
@@ -171,7 +170,7 @@ CREATE TABLE `Datos` (
   `Herramientas_de_trabajo_TestLink` text,
   `Herramientas_de_trabajo_Testitool` text,
   `Herramientas_de_trabajo_XQual_Studio` text,
-  `Herramientas_de_trabajo_Radi-testdir` text,
+  `Herramientas_de_trabajo_Radi_testdir` text,
   `Herramientas_de_trabajo_Data_Generator` text,
   `Herramientas_de_trabajo_Mantis` text,
   `Herramientas_de_trabajo_Selenium` text,
@@ -194,7 +193,7 @@ CREATE TABLE `Datos` (
   `Herramientas_de_trabajo_JMeter` text,
   `Herramientas_de_trabajo_HP_Quality_Center_ALM` text,
   `Herramientas_de_trabajo_QA_Complete` text,
-  `Herramientas_de_trabajo_T-Plan_Professional` text,
+  `Herramientas_de_trabajo_T_Plan_Professional` text,
   `Herramientas_de_trabajo_SMARTS` text,
   `Herramientas_de_trabajo_QAS_Test_Case_Studio` text,
   `Herramientas_de_trabajo_PractiTest` text,
@@ -483,4 +482,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-01 11:06:45
+-- Dump completed on 2017-08-01 12:10:03

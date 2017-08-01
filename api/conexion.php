@@ -13,11 +13,11 @@
     return $conexion;
   }
 
-  function connectPOO(){
+ /*  function connectPOO(){
     $host='localhost';
     $user='root';
-    $pass='Datos';
-    $base='reportes';
+    $pass='sistemas';
+    $base='Datos';
     $db = new mysqli($host,$user,$pass,$base);
 
       if(mysqli_connect_errno()){
@@ -27,5 +27,5 @@
     $db->query("SET NAMES 'utf8'");
 
     return $db;
-  }
+  } */
 ?>

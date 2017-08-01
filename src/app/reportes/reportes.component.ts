@@ -44,26 +44,18 @@ export class ReportesComponent implements OnInit {
   public herramienta3:boolean = false;
   public herramienta4:boolean = false;
   public herramienta5:boolean = false;
+  public herramienta6:boolean = false;
+  public herramienta7:boolean = false;
+  public herramienta8:boolean = false;
+  public herramienta9:boolean = false;
+  public herramienta10:boolean = false;
+  public herramienta11:boolean = false;
+  public herramienta12:boolean = false;
+  public herramienta13:boolean = false;
+  public herramienta14:boolean = false;
 
   public personas:any = {};
-  public met1:any = {};
-  public met2:any = {};
-  public cer1:any = {};
-  public cer2:any = {};
-  public cer3:any = {};
-  public idiomas:any = {};
-  public sol:any = {};
-  public len:any = {};
-  public len2:any = {};
-  public len3:any = {};
-  public len4:any = {};
-  public len5:any = {};
-  public len6:any = {};
-  public her:any = {};
-  public her2:any = {};
-  public her3:any = {};
-  public her4:any = {};
-  public her5:any = {};
+  public res: any = {};
 
   public barChartLabelsIdioma:string[] = ['Ingles', 'Frances', 'Italiano'];
   public nivel_label:any = ["Certificado","Curso","Avanzado","Intermedio","Basico","Nocion","Ninguno"];
@@ -166,56 +158,56 @@ export class ReportesComponent implements OnInit {
   ];  
 
   public barChartLabelsHerramienta14:string[] = [
-    'NeoLoad', 'WebLOAD_Professional', 'Forecast',
-    'ANTIS_Advanced_NET_Testing_System', 'Webserver_Stress_Tool', 'Load_Impact'
+    'NeoLoad', 'WebLOAD Professional', 'Forecast',
+    'ANTIS Advanced NET Testing System', 'Webserver Stress Tool', 'Load Impact'
   ];
 
   public barChartLabelsHerramienta13:string[] = [
-    'QA_Wizard', 'Squish', 'vTest',
-    'Internet_Macros', 'Testdroid', 'HP_LoadRunner',
+    'QA Wizard', 'Squish', 'vTest',
+    'Internet Macros', 'Testdroid', 'HP LoadRunner',
     'LoadStorm'
   ];
 
   public barChartLabelsHerramienta12:string[] = [
-    'TestRail', 'QuickTest_Pro', 'SeeTest',
-    'Rational_Robot', 'Sahi', 'SoapTest',
-    'Test_Complete'
+    'TestRail', 'QuickTest Pro', 'SeeTest',
+    'Rational Robot', 'Sahi', 'SoapTest',
+    'Test Complete'
   ];
 
   public barChartLabelsHerramienta11:string[] = [
-    'SMARTS', 'QAS_Test_Case_Studio', 'PractiTest',
-    'SpiraTest', 'TestLog', 'ApTest_Manager',
+    'SMARTS', 'QAS Test Case Studio', 'PractiTest',
+    'SpiraTest', 'TestLog', 'ApTest Manager',
     'Zephyr'
   ];
 
   public barChartLabelsHerramienta10:string[] = [
-    'FunkLoad', 'FWPTT_load_testing', 'LoadUI',
-    'JMeter', 'HP_Quality_Center_ALM', 'QA_Complete',
-    'T-Plan_Professional'
+    'FunkLoad', 'FWPTT load testing', 'LoadUI',
+    'JMeter', 'HP Quality Center ALM', 'QA Complete',
+    'T Plan Professional'
   ];
 
   public barChartLabelsHerramienta9:string[] = [
-    'Canoo_WebTest', 'Solex', 'Imprimatur',
+    'Canoo WebTest', 'Solex', 'Imprimatur',
     'SAMIE', 'ITP', 'WET',
     'Weblnject'
   ];
 
   public barChartLabelsHerramienta8:string[] = [
     'Selenium', 'Apium', 'Selendroid',
-    'Soapui', 'Watir_Ruby', 'Watin_Net',
+    'Soapui', 'Watir Ruby', 'Watin Net',
     'Capedit'
   ];
 
   public barChartLabelsHerramienta7:string[] = [
-    'Test_Environment_Toolkit', 'TestLink', 'Testitool',
-    'XQual_Studio', 'Radi-testdir', 'Data_Generator',
+    'Test Environment Toolkit', 'TestLink', 'Testitool',
+    'XQual Studio', 'Radi testdir', 'Data Generator',
     'Mantis'
   ];
 
   public barChartLabelsHerramienta6:string[] = [
-    'Bugzila_Testopia', 'FitNesse', 'qaManager',
-    'qaBook', 'RTH_open_source', 'Salome_tmf',
-    'Squash_TM'
+    'Bugzila Testopia', 'FitNesse', 'qaManager',
+    'qaBook', 'RTH open source', 'Salome tmf',
+    'Squash TM'
   ];
     					
   public barChartLabelsHerramienta5:string[] = [
@@ -457,6 +449,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -470,31 +471,31 @@ export class ReportesComponent implements OnInit {
         this.metodologia1 = false;
         this.metodologia2 = false;
         this.idioma = true;
-        this.idiomas = data;
+        this.res = data;
         this.barChartDataIdioma = [
           {
             data: [
-              parseInt(this.idiomas.ingles.avanzado.total),
-              parseInt(this.idiomas.frances.avanzado.total),
-              parseInt(this.idiomas.italiano.avanzado.total)
+              parseInt(this.res.ingles.avanzado.total),
+              parseInt(this.res.frances.avanzado.total),
+              parseInt(this.res.italiano.avanzado.total)
             ],label: 'Avanzado'
           },{
             data: [
-              parseInt(this.idiomas.ingles.intermedio.total),
-              parseInt(this.idiomas.frances.intermedio.total),
-              parseInt(this.idiomas.italiano.intermedio.total)
+              parseInt(this.res.ingles.intermedio.total),
+              parseInt(this.res.frances.intermedio.total),
+              parseInt(this.res.italiano.intermedio.total)
             ],label: 'Intermedio'
           },{
             data: [
-              parseInt(this.idiomas.ingles.basico.total),
-              parseInt(this.idiomas.frances.intermedio.total),
-              parseInt(this.idiomas.italiano.intermedio.total)
+              parseInt(this.res.ingles.basico.total),
+              parseInt(this.res.frances.intermedio.total),
+              parseInt(this.res.italiano.intermedio.total)
             ],label: 'Basico'
           },{
             data: [
-              parseInt(this.idiomas.ingles.ninguno.total),
-              parseInt(this.idiomas.frances.intermedio.total),
-              parseInt(this.idiomas.italiano.intermedio.total)
+              parseInt(this.res.ingles.ninguno.total),
+              parseInt(this.res.frances.intermedio.total),
+              parseInt(this.res.italiano.intermedio.total)
             ],label: 'Ninguno'
           }
         ];
@@ -517,6 +518,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -529,7 +539,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.her = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -539,7 +549,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta.length; y++){
             let label = this.barChartLabelsHerramienta[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -564,6 +574,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -576,7 +595,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.her2 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -586,7 +605,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta2.length; y++){
             let label = this.barChartLabelsHerramienta2[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her2[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -609,6 +628,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = true;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -621,7 +649,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.her3 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -631,7 +659,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta3.length; y++){
             let label = this.barChartLabelsHerramienta3[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her3[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -654,6 +682,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = true;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -666,7 +703,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.her4 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -676,7 +713,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta4.length; y++){
             let label = this.barChartLabelsHerramienta4[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her4[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -699,6 +736,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = true;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -711,7 +757,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.her5 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -721,7 +767,493 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsHerramienta5.length; y++){
             let label = this.barChartLabelsHerramienta5[y].split(" ").join("_");
-            numeros[y] = parseInt(this.her5[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas6(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta6).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = true;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta6.length; y++){
+            let label = this.barChartLabelsHerramienta6[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas7(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta7).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = true;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta7.length; y++){
+            let label = this.barChartLabelsHerramienta7[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas8(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta8).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = true;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta8.length; y++){
+            let label = this.barChartLabelsHerramienta8[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas9(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta9).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = true;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta9.length; y++){
+            let label = this.barChartLabelsHerramienta9[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas10(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta10).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = true;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta10.length; y++){
+            let label = this.barChartLabelsHerramienta10[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas11(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta11).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = true;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta11.length; y++){
+            let label = this.barChartLabelsHerramienta11[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas12(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta12).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = true;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta12.length; y++){
+            let label = this.barChartLabelsHerramienta12[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas13(){
+    this._datos.obtenerDatosGrafica("herramienta",7,this.barChartLabelsHerramienta13).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = true;
+        this.herramienta14 = false;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta13.length; y++){
+            let label = this.barChartLabelsHerramienta13[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
+          }
+          clone[x].data = numeros;
+          clone[x].label = this.nivel_label[x];
+        }
+        this.barChartData = clone;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+
+  }
+
+  obtenerHerramientas14(){
+    this._datos.obtenerDatosGrafica("herramienta",6,this.barChartLabelsHerramienta14).subscribe(
+      data => {
+        this.idioma = false;
+        this.herramienta1 = false;
+        this.herramienta2 = false;
+        this.herramienta3 = false;
+        this.herramienta4 = false;
+        this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = true;
+        this.lenguaje1 = false;
+        this.lenguaje2 = false;
+        this.lenguaje3 = false;
+        this.lenguaje4 = false;
+        this.lenguaje5 = false;
+        this.lenguaje6 = false;
+        this.solucion = false;
+        this.certificacion1 = false;
+        this.certificacion2 = false;
+        this.certificacion3 = false;
+        this.metodologia1 = false;
+        this.metodologia2 = false;
+        this.res = data;
+
+        let numeros = [];
+        let clone = [];
+        clone = this.barChartData.slice();
+
+        for(let x=0; x<this.nivel_label.length; x++){
+          numeros = [];
+          for(let y=0; y<this.barChartLabelsHerramienta14.length; y++){
+            let label = this.barChartLabelsHerramienta14[y].split(" ").join("_");
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -744,6 +1276,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = true;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -756,7 +1297,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -769,7 +1310,7 @@ export class ReportesComponent implements OnInit {
             if(label == "C++"){ label = "C_plus_plus"; }
             if(label == "C#"){ label = "C_Sharp"; }
             if(label == "SQL"){ label = "SQL_1"; }
-            numeros[y] = parseInt(this.len[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -777,7 +1318,6 @@ export class ReportesComponent implements OnInit {
         this.barChartData = clone;
       },
       error => {
-        console.log("ERROR");
         console.log(error);
       }
     );
@@ -793,6 +1333,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = true;
         this.lenguaje3 = false;
@@ -805,7 +1354,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len2 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -816,7 +1365,7 @@ export class ReportesComponent implements OnInit {
           for(let y=0; y<this.barChartLabelsLenguaje2.length; y++){
             let label = this.barChartLabelsLenguaje2[y].split(" ").join("_");
             if(label == "ASP.NET"){ label = "ASP_NET"; }
-            numeros[y] = parseInt(this.len2[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -839,6 +1388,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = true;
@@ -851,7 +1409,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len3 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -862,7 +1420,7 @@ export class ReportesComponent implements OnInit {
           for(let y=0; y<this.barChartLabelsLenguaje3.length; y++){
             let label = this.barChartLabelsLenguaje3[y].split(" ").join("_");
             if(label == "JSF_2.0"){ label = "JSF_2_0"; }
-            numeros[y] = parseInt(this.len3[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -885,6 +1443,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -897,7 +1464,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len4 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -907,7 +1474,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsLenguaje4.length; y++){
             let label = this.barChartLabelsLenguaje4[y].split(" ").join("_");
-            numeros[y] = parseInt(this.len4[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -930,6 +1497,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -942,7 +1518,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len5 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -952,7 +1528,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsLenguaje5.length; y++){
             let label = this.barChartLabelsLenguaje5[y].split(" ").join("_");
-            numeros[y] = parseInt(this.len5[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -975,6 +1551,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -987,7 +1572,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.len6 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -997,7 +1582,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsLenguaje6.length; y++){
             let label = this.barChartLabelsLenguaje6[y].split(" ").join("_");
-            numeros[y] = parseInt(this.len6[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1020,6 +1605,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1032,7 +1626,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.sol = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -1042,7 +1636,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsSolucion.length; y++){
             let label = this.barChartLabelsSolucion[y].split(" ").join("_");
-            numeros[y] = parseInt(this.sol[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1065,6 +1659,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1077,7 +1680,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.cer1 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -1087,7 +1690,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsCertificacion1.length; y++){
             let label = this.barChartLabelsCertificacion1[y].split(" ").join("_");
-            numeros[y] = parseInt(this.cer1[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1110,6 +1713,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1122,7 +1734,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.cer2 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -1132,7 +1744,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsCertificacion2.length; y++){
             let label = this.barChartLabelsCertificacion2[y].split(" ").join("_");
-            numeros[y] = parseInt(this.cer2[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1155,6 +1767,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1167,7 +1788,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = true;
         this.metodologia1 = false;
         this.metodologia2 = false;
-        this.cer3 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -1177,7 +1798,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsCertificacion3.length; y++){
             let label = this.barChartLabelsCertificacion3[y].split(" ").join("_");
-            numeros[y] = parseInt(this.cer3[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1200,6 +1821,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1212,7 +1842,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = true;
         this.metodologia2 = false;
-        this.met1 = data;
+        this.res = data;
 
         let numeros = [];
         let clone = [];
@@ -1222,7 +1852,7 @@ export class ReportesComponent implements OnInit {
           numeros = [];
           for(let y=0; y<this.barChartLabelsMetodologia1.length; y++){
             let label = this.barChartLabelsMetodologia1[y].split(" ").join("_");
-            numeros[y] = parseInt(this.met1[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1245,6 +1875,15 @@ export class ReportesComponent implements OnInit {
         this.herramienta3 = false;
         this.herramienta4 = false;
         this.herramienta5 = false;
+        this.herramienta6 = false;
+        this.herramienta7 = false;
+        this.herramienta8 = false;
+        this.herramienta9 = false;
+        this.herramienta10 = false;
+        this.herramienta11 = false;
+        this.herramienta12 = false;
+        this.herramienta13 = false;
+        this.herramienta14 = false;
         this.lenguaje1 = false;
         this.lenguaje2 = false;
         this.lenguaje3 = false;
@@ -1257,7 +1896,7 @@ export class ReportesComponent implements OnInit {
         this.certificacion3 = false;
         this.metodologia1 = false;
         this.metodologia2 = true;
-        this.met2 = data;
+        this.res = data;
         
         let numeros = [];
         let clone = [];
@@ -1268,7 +1907,7 @@ export class ReportesComponent implements OnInit {
           for(let y=0; y<this.barChartLabelsMetodologia2.length; y++){
             let label = this.barChartLabelsMetodologia2[y].split(" ").join("_");
             if(label == "CMMI_PPQA:VER&VAL"){ label = "CMMI_PPQA_VER_VAL"; }
-            numeros[y] = parseInt(this.met2[label][this.nivel_label[x]].total);
+            numeros[y] = parseInt(this.res[label][this.nivel_label[x]].total);
           }
           clone[x].data = numeros;
           clone[x].label = this.nivel_label[x];
@@ -1293,6 +1932,15 @@ export class ReportesComponent implements OnInit {
     $("#h3").removeClass("list-group-item-info");
     $("#h4").removeClass("list-group-item-info");
     $("#h5").removeClass("list-group-item-info");
+    $("#h6").removeClass("list-group-item-info");
+    $("#h7").removeClass("list-group-item-info");
+    $("#h8").removeClass("list-group-item-info");
+    $("#h9").removeClass("list-group-item-info");
+    $("#h10").removeClass("list-group-item-info");
+    $("#h11").removeClass("list-group-item-info");
+    $("#h12").removeClass("list-group-item-info");
+    $("#h13").removeClass("list-group-item-info");
+    $("#h14").removeClass("list-group-item-info");
     $("#l1").removeClass("list-group-item-info");
     $("#l2").removeClass("list-group-item-info");
     $("#l3").removeClass("list-group-item-info");
@@ -1319,6 +1967,7 @@ export class ReportesComponent implements OnInit {
   }
 
   verGrafica(id){
+
     this.quitarGraficas();
     this.descativarOpcionesMenu();
     $(id).addClass("list-group-item-info");
@@ -1343,7 +1992,17 @@ export class ReportesComponent implements OnInit {
     if(id == "#c3"){ this.obtenerCertificaciones3(); }
 
     if(id == "#m1"){ this.obtenerMetodologias1(); }
-    if(id == "#m2"){ this.obtenerMetodologias1(); }
+    if(id == "#m2"){ this.obtenerMetodologias2(); }
+
+    if(id == "#h6"){ this.obtenerHerramientas6(); }
+    if(id == "#h7"){ this.obtenerHerramientas7(); }
+    if(id == "#h8"){ this.obtenerHerramientas8(); }
+    if(id == "#h9"){ this.obtenerHerramientas9(); }
+    if(id == "#h10"){ this.obtenerHerramientas10(); }
+    if(id == "#h11"){ this.obtenerHerramientas11(); }
+    if(id == "#h12"){ this.obtenerHerramientas12(); }
+    if(id == "#h13"){ this.obtenerHerramientas13(); }
+    if(id == "#h14"){ this.obtenerHerramientas14(); }
   }
 
 }
